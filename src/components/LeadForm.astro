@@ -12,7 +12,7 @@ const popular = [
 const presetInPopular = popular.some(([s]) => s === preset);
 const presetCourse = !presetInPopular && preset ? courses.find((c) => c.slug === preset) : null;
 ---
-<form class="form lead-form" id={id} novalidate data-lead-form data-endpoint={site.leadEndpoint} data-thanks={url('/thanks/')}>
+<form class="form lead-form" id={id} novalidate data-lead-form data-endpoint={site.leadEndpoint} data-email-endpoint={site.leadEmailEndpoint || ''} data-thanks={url('/thanks/')}>
   {title && <h3>{title}</h3>}
   <div class="form-context" data-context aria-live="polite"></div>
   <div class="form__row">

@@ -4,7 +4,13 @@
   "url": "https://intekko.kz",
   "founded": 2019,
   "phones": [
-    { "label": "Отдел продаж", "e164": "+77085550123", "display": "+7 (708) 555 01 23", "whatsapp": true, "telegram": true }
+    {
+      "label": "Отдел продаж",
+      "e164": "+77085550123",
+      "display": "+7 (708) 555 01 23",
+      "whatsapp": true,
+      "telegram": true
+    }
   ],
   "email": "sales@intekko.kz",
   "address": "Астана, Есильский район (точный адрес уточняется)",
@@ -16,10 +22,26 @@
     "bilimlms": "https://bilimlms.com"
   },
   "stats": [
-    { "value": 40, "suffix": "+", "label": "компаний-клиентов" },
-    { "value": 5400, "suffix": "+", "label": "обученных специалистов" },
-    { "value": 20, "suffix": "+", "label": "инструкторов и экспертов" },
-    { "value": 3, "suffix": "", "label": "языка: казахский, русский, английский" }
+    {
+      "value": 40,
+      "suffix": "+",
+      "label": "компаний-клиентов"
+    },
+    {
+      "value": 5400,
+      "suffix": "+",
+      "label": "обученных специалистов"
+    },
+    {
+      "value": 20,
+      "suffix": "+",
+      "label": "инструкторов и экспертов"
+    },
+    {
+      "value": 3,
+      "suffix": "",
+      "label": "языка: казахский, русский, английский"
+    }
   ],
   "accreditations": {
     "rospa": "Аккредитованный центр №223",
@@ -28,5 +50,7 @@
   },
   "leadEndpoint": "/api/lead.php",
   "scheduleEndpoint": "/api/schedule.php",
-  "metrikaId": null
+  "metrikaId": null,
+  "leadEmail": "info@intekko.kz",
+  "leadEmailEndpoint": "https://formsubmit.co/ajax/info@intekko.kz"
 }

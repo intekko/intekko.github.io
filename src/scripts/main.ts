@@ -124,6 +124,44 @@ function collect(form: HTMLFormElement) {
     page_url: location.href, referrer: store.get('ref') || document.referrer, website: String(fd.get('website') || ''), ...utm,
   };
 }
+async function timedFetch(url: string, init: RequestInit, ms = 8000) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), ms);
+  try { return await fetch(url, { ...init, signal: ctrl.signal }); } finally { clearTimeout(t); }
+}
+async function sendPrimary(url: string, lead: ReturnType<typeof collect>) {
+  try {
+    const res = await timedFetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead) });
+    return res.ok && (res.headers.get('content-type') || '').includes('json') && (await res.json()).ok === true;
+  } catch { return false; }
+}
+async function sendEmail(url: string, lead: ReturnType<typeof collect>) {
+  const course = lead.course_titles.length ? lead.course_titles.join(', ') : 'консультация';
+  const body = {
+    _subject: `Заявка с сайта: ${course}${lead.context && lead.schedule_id ? ' [' + lead.context.replace(/^(Запись|Курс):\s*/, '') + ']' : ''}`,
+    _template: 'table',
+    _honey: lead.website,
+    'Имя': lead.name,
+    'Телефон': lead.phone,
+    'Email': lead.email || '—',
+    'Компания': lead.company || '—',
+    'Курс / услуга': course,
+    'Дата из графика': lead.context || '—',
+    'Участников': lead.participants || '—',
+    'Формат': lead.format || '—',
+    'Сообщение': lead.message || '—',
+    'Страница': lead.page_url,
+    'Источник перехода': lead.referrer || '—',
+    'UTM': [lead.utm_source, lead.utm_medium, lead.utm_campaign, lead.utm_term, lead.utm_content].filter(Boolean).join(' / ') || '—',
+  };
+  try {
+    const res = await timedFetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) }, 12000);
+    if (!res.ok) return false;
+    const j = await res.json();
+    return j.success === true || j.success === 'true';
+  } catch { return false; }
+}
+
 function successView(form: HTMLFormElement, lead: ReturnType<typeof collect>, demo: boolean) {
   const wa = ($('.header__wa') as HTMLAnchorElement | null)?.href || 'https://wa.me/77085550123';
   const text = encodeURIComponent(
@@ -136,9 +174,9 @@ function successView(form: HTMLFormElement, lead: ReturnType<typeof collect>, de
   box.className = 'form-success';
   box.setAttribute('role', 'status');
   box.innerHTML = `<span class="icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
-    <h3>Спасибо, ${lead.name.replace(/[<>&"]/g, '')}!</h3>
-    <p class="muted">Мы свяжемся с вами в течение рабочего дня.</p>
-    ${demo ? `<p class="demo-note">Демо-версия сайта: приём заявок в Bitrix24 подключается на боевом хостинге. Чтобы заявка точно дошла, отправьте её в WhatsApp одной кнопкой.</p>` : ''}
+    <h3>${demo ? 'Почти готово' : 'Спасибо'}, ${lead.name.replace(/[<>&"]/g, '')}!</h3>
+    ${demo ? '' : '<p class="muted">Мы свяжемся с вами в течение рабочего дня.</p>'}
+    ${demo ? `<p class="demo-note">Не удалось отправить заявку автоматически. Чтобы она точно дошла, отправьте её в WhatsApp одной кнопкой — текст уже заполнен.</p>` : ''}
     <a class="btn btn--wa" href="${wa}?text=${text}" target="_blank" rel="noopener" data-goal="click_whatsapp">Отправить в WhatsApp</a>`;
   form.replaceWith(box);
 }
@@ -163,15 +201,11 @@ $$<HTMLFormElement>('[data-lead-form]').forEach((form) => {
     const btn = $<HTMLButtonElement>('button[type="submit"]', form)!;
     btn.disabled = true; btn.textContent = 'Отправляем…';
     goal('form_submit');
-    let ok = false;
-    try {
-      const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 8000);
-      const res = await fetch(form.dataset.endpoint!, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(lead), signal: ctrl.signal });
-      clearTimeout(t);
-      ok = res.ok && (res.headers.get('content-type') || '').includes('json') && (await res.json()).ok === true;
-    } catch { ok = false; }
-    if (ok) { location.href = form.dataset.thanks!; return; }
+    // 1) Боевой обработчик (hoster.kz: Bitrix24 + запасной SMTP)
+    if (await sendPrimary(form.dataset.endpoint!, lead)) { location.href = form.dataset.thanks!; return; }
+    // 2) Временный канал: письмо через FormSubmit (статический хостинг)
+    if (form.dataset.emailEndpoint && (await sendEmail(form.dataset.emailEndpoint, lead))) { location.href = form.dataset.thanks!; return; }
+    // 3) Ничего не дошло — честно предлагаем WhatsApp
     successView(form, lead, true);
   });
 });
