@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import { url } from '../lib/util';
+---
+<Base title="Страница не найдена" description="Такой страницы нет. Найдите нужный курс в каталоге INTEKKO." noindex>
+  <section class="section"><div class="wrap" style="max-width:680px;text-align:center">
+    <div style="font:700 96px/1 var(--font-head);color:var(--red-600)">404</div>
+    <h1 style="font-size:32px">Такой страницы нет</h1>
+    <p class="muted">Возможно, адрес изменился после обновления сайта. Найдите курс в каталоге:</p>
+    <form action={url('/courses/')} method="get" class="search-box" style="margin:20px 0"><Icon name="search" /><input type="search" name="q" placeholder="ПТМ, ПромБез, IOSH, вождение…" aria-label="Поиск курса" /></form>
+    <div class="btn-row" style="justify-content:center"><a class="btn btn--primary" href={url('/')}>На главную</a><a class="btn btn--outline" href={url('/schedule/')}>График курсов</a></div>
+  </div></section>
+</Base>

@@ -1,0 +1,46 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import SectionHead from '../components/SectionHead.astro';
+import LeadForm from '../components/LeadForm.astro';
+import consulting from '../data/consulting.json';
+import { url } from '../lib/util';
+---
+<Base title="Консалтинг по ТБ, ОТ и ООС — аудит и построение систем" description="Консалтинг INTEKKO: аудит систем менеджмента БиОТ и ООС, контроль подрядчиков, культура безопасности, «Жизненно важные правила», наряд-допуск, тендерная документация, Train the Trainer.">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <span>Консалтинг</span></nav>
+      <span class="eyebrow">Консалтинг и решения</span>
+      <h1>Больше, чем обучение: выстраиваем систему</h1>
+      <p class="lead">Диагностируем систему безопасности, внедряем культуру безопасности и разрабатываем документацию, которая работает на объекте, а не только на бумаге.</p>
+      <button class="btn btn--primary" type="button" data-lead data-course="consulting" data-title="Консалтинг">Обсудить задачу</button>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <div class="grid grid-4">
+        {consulting.areas.map((a) => <div class="card"><span class="icon-box"><Icon name={a.icon} /></span><h3 style="margin-top:14px;font-size:18px">{a.title}</h3><p class="muted" style="margin:0;font-size:14.5px">{a.text}</p></div>)}
+      </div>
+    </div>
+  </section>
+  <section class="section section--white">
+    <div class="wrap">
+      <SectionHead eyebrow="Услуги" title="16 направлений консалтинга" text="А также: аудит курсов по вождению на соответствие RoSPA, подготовка внутренних тренеров (Train the Trainer), разработка курсов в корпоративном стиле заказчика." />
+      <ol class="numlist">{consulting.services.map((s) => <li>{s}</li>)}</ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <SectionHead eyebrow="Как проходит аудит" title="Четыре этапа диагностики" />
+      <div class="grid grid-4">
+        <div class="card step"><span class="step__num">01</span><h3>Запрос и рамки</h3><p>Определяем цели, объекты, подрядчиков и стандарты оценки (законодательство РК, ISO 45001, корпоративные требования).</p></div>
+        <div class="card step"><span class="step__num">02</span><h3>Документы</h3><p>Анализируем политики, процедуры, реестры рисков, наряд-допуски, записи об обучении.</p></div>
+        <div class="card step"><span class="step__num">03</span><h3>Объект</h3><p>Наблюдения на площадке, интервью с работниками и руководителями, поведенческие аудиты.</p></div>
+        <div class="card card--dark step"><span class="step__num">04</span><h3>Отчёт и план</h3><p>Оценка зрелости, перечень несоответствий и приоритетный план действий с ответственными и сроками.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:0">
+    <div class="wrap"><div class="cta"><div class="cta__left"><span class="eyebrow">Консалтинг</span><h2>Расскажите о задаче</h2><p style="color:#C9D4E2">Подготовим предложение по объёму работ и срокам.</p></div><div class="cta__right"><LeadForm id="consult-form" preset="consulting" /></div></div></div>
+  </section>
+</Base>

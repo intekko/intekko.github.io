@@ -1,0 +1,131 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import LeadForm from '../../../components/LeadForm.astro';
+import { courses, dirBySlug, upcoming, formatRange, STATUS, FORMAT_LABEL, CERT_LABEL, LANG_LABEL, url, courseUrl } from '../../../lib/util';
+export function getStaticPaths() {
+  return courses.filter((c) => c.hasPage).map((c) => ({ params: { direction: c.direction, course: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+const d = dirBySlug(c.direction);
+const dates = upcoming.filter((s) => s.course_slug === c.slug).slice(0, 4);
+const related = courses.filter((x) => x.hasPage && x.slug !== c.slug && (x.direction === c.direction || x.flagship)).sort((a, b) => Number(b.direction === c.direction) - Number(a.direction === c.direction)).slice(0, 3);
+const certText: Record<string, string> = {
+  rospa: 'Номерной сертификат RoSPA Qualifications (Великобритания). Подлинность проверяется онлайн по номеру сертификата в реестре RoSPA. INTEKKO — аккредитованный центр №223.',
+  iosh: 'Сертификат IOSH Managing Safely (Великобритания), выдаётся IOSH после успешной сдачи теста и практической оценки рисков. INTEKKO — аккредитованный центр №5072. Проверка — по QR-коду или номеру на сертификате.',
+  kz: 'Удостоверение установленного образца и протокол проверки знаний по законодательству РК. Обучение по промышленной безопасности проводится на основании аттестата МЧС РК № KZ88VEK00014474 от 16.03.2023.',
+  intekko: 'Сертификат учебного центра INTEKKO о прохождении обучения с указанием программы и объёма часов.',
+  nebosh: 'Курс готовится: INTEKKO находится в процессе получения аккредитации NEBOSH.',
+};
+const why = [
+  ['Аккредитованный центр', 'RoSPA №223 и IOSH №5072, ежегодный международный аудит.'],
+  ['Инструкторы-практики', '20+ экспертов с опытом в нефтегазе, горнорудной отрасли, строительстве и транспорте.'],
+  ['Три языка', 'Обучение на казахском, русском и английском.'],
+  ['Гибкий формат', 'В центре в Астане, на вашем объекте или онлайн.'],
+  ['Кейсы из вашей отрасли', 'Адаптируем примеры и практику под специфику заказчика.'],
+];
+const pageTitle = c.seo.title || `${c.title} — обучение в Казахстане`;
+const desc = c.seo.description || `${c.summary} Очно, выездом и онлайн. Запись на ближайшие даты.`;
+const schema = [
+  { '@context': 'https://schema.org', '@type': 'Course', name: c.title, description: c.summary, provider: { '@type': 'EducationalOrganization', name: 'INTEKKO', sameAs: 'https://intekko.kz' }, inLanguage: c.languages,
+    hasCourseInstance: dates.map((s) => ({ '@type': 'CourseInstance', startDate: s.start_date, endDate: s.end_date, courseMode: /дистанц|виртуал/i.test(s.format) ? 'online' : 'onsite', location: s.city })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Главная', item: new URL(url('/'), Astro.site).href },
+    { '@type': 'ListItem', position: 2, name: 'Курсы', item: new URL(url('/courses/'), Astro.site).href },
+    { '@type': 'ListItem', position: 3, name: d.title, item: new URL(url(`/courses/${d.slug}/`), Astro.site).href },
+    { '@type': 'ListItem', position: 4, name: c.shortTitle } ] },
+];
+---
+<Base title={pageTitle} description={desc} schema={schema} image={`/img/${c.image}.webp`}>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <a href={url('/courses/')}>Курсы</a> / <a href={url(`/courses/${d.slug}/`)}>{d.title}</a> / <span>{c.shortTitle}</span></nav>
+      <span class="eyebrow">{d.title}</span>
+      <h1>{c.title}</h1>
+      <p class="lead">{c.summary}</p>
+      <div class="badges">
+        {c.duration && <span class="badge"><Icon name="clock" size={14} /> {c.duration}</span>}
+        <span class="badge"><Icon name="award" size={14} /> {CERT_LABEL[c.certificate]}</span>
+        <span class="badge"><Icon name="lang" size={14} /> {c.languages.map((l) => LANG_LABEL[l]).join(', ')}</span>
+        {c.formats.map((f) => <span class="badge">{FORMAT_LABEL[f]}</span>)}
+      </div>
+    </div>
+  </section>
+  <section class="section" style="padding-top:40px">
+    <div class="wrap course-layout">
+      <div class="content">
+        {c.image && <img src={url(`/img/${c.image}.webp`)} alt={c.title} width="1200" height="500" style="border-radius:var(--radius);width:100%;aspect-ratio:21/8;object-fit:cover;margin-bottom:36px" />}
+        <section>
+          <span class="eyebrow">Для кого</span>
+          <h2>Кому подходит курс</h2>
+          <ul class="check-list">{c.audience.map((a) => <li><Icon name="checkCircle" />{a}</li>)}</ul>
+        </section>
+        <section>
+          <span class="eyebrow">Программа</span>
+          <h2>Что изучаем</h2>
+          {c.modules.map(([t, x], i) => (<details class="acc" open={i === 0}><summary>{t}<Icon name="chevron" class="chev" /></summary><div>{x}</div></details>))}
+        </section>
+        <section>
+          <span class="eyebrow">Сертификат</span>
+          <h2>Документ по итогам обучения</h2>
+          <div class="card" style="display:flex;gap:16px;align-items:flex-start">
+            {c.certificate === 'rospa' ? <img src={url('/img/rospa-logo.webp')} alt="RoSPA" width="100" height="44" /> : c.certificate === 'iosh' ? <img src={url('/img/iosh-logo.webp')} alt="IOSH" width="40" height="55" /> : <span class="icon-box"><Icon name="award" /></span>}
+            <p style="margin:0">{certText[c.certificate]}</p>
+          </div>
+        </section>
+        <section>
+          <span class="eyebrow">Форматы</span>
+          <h2>Как можно пройти обучение</h2>
+          <div class="grid grid-2">
+            {c.formats.includes('center') && <div class="card"><span class="icon-box"><Icon name="building" /></span><h3 style="margin-top:12px">Очно в центре</h3><p class="muted" style="margin:0">Открытые группы в Астане по графику.</p></div>}
+            {c.formats.includes('onsite') && <div class="card"><span class="icon-box"><Icon name="truck" /></span><h3 style="margin-top:12px">На вашем объекте</h3><p class="muted" style="margin:0">Корпоративная группа в любом городе Казахстана.</p></div>}
+            {c.formats.includes('webinar') && <div class="card"><span class="icon-box"><Icon name="video" /></span><h3 style="margin-top:12px">Онлайн-вебинар</h3><p class="muted" style="margin:0">Живой инструктор в Teams или Zoom.</p></div>}
+            {c.formats.includes('elearning') && <div class="card"><span class="icon-box"><Icon name="laptop" /></span><h3 style="margin-top:12px">E-learning</h3><p class="muted" style="margin:0">Самостоятельно на BilimLMS.com 24/7.</p></div>}
+          </div>
+        </section>
+        <section>
+          <span class="eyebrow">Почему INTEKKO</span>
+          <h2>Пять причин выбрать нас</h2>
+          <ol class="numlist">{why.map(([t, x]) => <li><div><b>{t}.</b> <span class="muted">{x}</span></div></li>)}</ol>
+        </section>
+        {c.faq.length > 0 && (
+          <section>
+            <span class="eyebrow">FAQ</span>
+            <h2>Частые вопросы</h2>
+            {c.faq.map(([q, a]) => (<details class="acc"><summary>{q}<Icon name="chevron" class="chev" /></summary><div>{a}</div></details>))}
+          </section>
+        )}
+      </div>
+      <aside class="course-aside">
+        <div class="card">
+          <h3>Ближайшие даты</h3>
+          {dates.length ? dates.map((s) => (
+            <div class="aside-date">
+              <div><b>{formatRange(s.start_date, s.end_date)}</b><br /><span class="muted">{s.city} · {s.format}</span></div>
+              {s.status === 'closed' ? <span class="badge badge--closed">Закрыт</span> : <button class="btn btn--primary btn--sm" type="button" data-lead data-course={c.slug} data-title={c.shortTitle} data-schedule={s.id} data-date={formatRange(s.start_date, s.end_date)} data-city={s.city} data-goal="schedule_signup">Записаться</button>}
+            </div>
+          )) : <p class="muted" style="font-size:15px">Открытых дат пока нет — оставьте заявку, сообщим о наборе.</p>}
+          <button class="btn btn--primary btn--block" type="button" style="margin-top:12px" data-lead data-course={c.slug} data-title={c.shortTitle}>{dates.length ? 'Записаться' : 'Оставить заявку'}</button>
+        </div>
+        <div class="card card--dark">
+          <span class="icon-box"><Icon name="users" /></span>
+          <h3 style="margin-top:12px">Корпоративная группа на вашем объекте</h3>
+          <p class="muted" style="font-size:15px">Приедем в любой город, адаптируем программу. Стоимость — по запросу.</p>
+          <button class="btn btn--white btn--block" type="button" data-lead data-course={c.slug} data-title={c.shortTitle}>Узнать стоимость</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section class="section section--white">
+    <div class="wrap">
+      <h2 style="font-size:26px">Похожие курсы</h2>
+      <div class="grid grid-3">
+        {related.map((r) => (<a class="card" href={courseUrl(r)}><span class="eyebrow">{dirBySlug(r.direction).title}</span><h3>{r.shortTitle}</h3><p class="muted" style="font-size:15px;margin:0">{r.summary}</p></a>))}
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap"><div class="cta"><div class="cta__left"><span class="eyebrow">Заявка</span><h2>Запишитесь на курс «{c.shortTitle}»</h2><p style="color:#C9D4E2">Пришлём программу, ближайшие даты и коммерческое предложение.</p></div><div class="cta__right"><LeadForm id="course-form" preset={c.slug} /></div></div></div>
+  </section>
+</Base>

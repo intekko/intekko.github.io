@@ -1,0 +1,64 @@
+---
+import Icon from './Icon.astro';
+import site from '../data/site.json';
+import { upcoming, courseBySlug, courseUrl, dirBySlug, directions, formatRange, STATUS, cityKey, formatKey, url } from '../lib/util';
+interface Props { limit?: number; filters?: boolean; courseSlug?: string; direction?: string }
+const { limit, filters = false, courseSlug, direction } = Astro.props;
+let items = upcoming;
+if (courseSlug) items = items.filter((s) => s.course_slug === courseSlug);
+if (direction) items = items.filter((s) => courseBySlug(s.course_slug)?.direction === direction);
+const shown = limit ? items.slice(0, limit) : items;
+const cities = [...new Set(upcoming.map((s) => s.city))];
+const months = [...new Set(upcoming.map((s) => s.start_date.slice(0, 7)))];
+const MN = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+const usedCourses = [...new Set(upcoming.map((s) => s.course_slug))].map((s) => courseBySlug(s)!);
+const rows = shown.map((s) => {
+  const c = courseBySlug(s.course_slug)!;
+  return { s, c, dir: dirBySlug(c.direction), st: STATUS[s.status] || STATUS.planned, dates: formatRange(s.start_date, s.end_date) };
+});
+---
+<div class="schedule" data-schedule-root data-limit={limit || 0} data-course={courseSlug || ''} data-direction={direction || ''} data-endpoint={site.scheduleEndpoint}>
+  {filters && (
+    <form class="filters" data-filters aria-label="Фильтры графика">
+      <div class="field"><label for="f-dir">Направление</label><select id="f-dir" name="dir"><option value="">Все</option>{directions.map((d) => <option value={d.slug}>{d.title}</option>)}</select></div>
+      <div class="field"><label for="f-course">Курс</label><select id="f-course" name="course"><option value="">Все</option>{usedCourses.map((c) => <option value={c.slug}>{c.shortTitle}</option>)}</select></div>
+      <div class="field"><label for="f-city">Город</label><select id="f-city" name="city"><option value="">Все</option>{cities.map((c) => <option value={cityKey(c)}>{c}</option>)}</select></div>
+      <div class="field"><label for="f-format">Формат</label><select id="f-format" name="format"><option value="">Все</option><option value="offline">Очный класс</option><option value="online">Онлайн</option></select></div>
+      <div class="field"><label for="f-month">Месяц</label><select id="f-month" name="month"><option value="">Все</option>{months.map((m) => <option value={m}>{MN[+m.slice(5) - 1]} {m.slice(0, 4)}</option>)}</select></div>
+      <button class="btn btn--outline" type="reset">Сбросить</button>
+    </form>
+  )}
+  <table class="sched-table">
+    <thead><tr><th scope="col">Курс</th><th scope="col">Даты</th><th scope="col">Страна</th><th scope="col">Город</th><th scope="col">Формат</th><th scope="col">Статус</th><th scope="col"><span class="sr-only">Действие</span></th></tr></thead>
+    <tbody data-rows>
+      {rows.map(({ s, c, dir, st, dates }) => (
+        <tr data-item data-dir={c.direction} data-course={c.slug} data-city={cityKey(s.city)} data-format={formatKey(s.format)} data-month={s.start_date.slice(0, 7)} data-end={s.end_date || s.start_date}>
+          <td class="sched-course"><a href={courseUrl(c)}>{c.shortTitle}</a><small>{dir.title}{s.note ? ` · ${s.note}` : ''}</small></td>
+          <td><span class="with-ico"><Icon name="calendar" size={16} />{dates}</span></td>
+          <td>{s.country}</td>
+          <td><span class="with-ico"><Icon name="pin" size={16} />{s.city}</span></td>
+          <td>{s.format}</td>
+          <td><span class={`badge ${st.cls}`}>{st.label}</span>{s.seats_left ? <small class="muted" style="display:block;font-size:12.5px;margin-top:4px">осталось мест: {s.seats_left}</small> : null}</td>
+          <td style="text-align:right">{s.status === 'closed' ? <button class="btn btn--sm" disabled>Записаться</button> : <button class="btn btn--primary btn--sm" type="button" data-lead data-course={c.slug} data-title={c.shortTitle} data-schedule={s.id} data-date={dates} data-city={s.city} data-goal="schedule_signup">Записаться</button>}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  <div class="sched-cards" data-cards>
+    {rows.map(({ s, c, dir, st, dates }) => (
+      <article class="card sched-card" data-item data-dir={c.direction} data-course={c.slug} data-city={cityKey(s.city)} data-format={formatKey(s.format)} data-month={s.start_date.slice(0, 7)} data-end={s.end_date || s.start_date}>
+        <div class="badges"><span class={`badge ${st.cls}`}>{st.label}</span>{s.seats_left ? <span class="badge">мест: {s.seats_left}</span> : null}</div>
+        <h3><a href={courseUrl(c)}>{c.shortTitle}</a></h3>
+        <div class="meta"><span class="with-ico"><Icon name="calendar" size={15} />{dates}</span><span class="with-ico"><Icon name="pin" size={15} />{s.city}</span><span>{s.format}</span></div>
+        {s.status === 'closed' ? <button class="btn btn--block" disabled>Набор закрыт</button> : <button class="btn btn--primary btn--block" type="button" data-lead data-course={c.slug} data-title={c.shortTitle} data-schedule={s.id} data-date={dates} data-city={s.city} data-goal="schedule_signup">Записаться</button>}
+      </article>
+    ))}
+  </div>
+  <div class="sched-empty" data-empty hidden={rows.length > 0}>Ближайших дат пока нет — <button class="btn btn--sm btn--outline" type="button" data-lead data-course={courseSlug || ''}>оставьте заявку</button>, сообщим о наборе.</div>
+  <script type="application/ld+json" set:html={JSON.stringify(rows.map(({ s, c }) => ({
+    '@context': 'https://schema.org', '@type': 'CourseInstance', name: c.title, startDate: s.start_date, endDate: s.end_date,
+    courseMode: formatKey(s.format) === 'online' ? 'online' : 'onsite', inLanguage: s.language.toLowerCase(),
+    location: formatKey(s.format) === 'online' ? { '@type': 'VirtualLocation', url: Astro.site?.href } : { '@type': 'Place', name: s.city, address: { '@type': 'PostalAddress', addressLocality: s.city, addressCountry: 'KZ' } },
+    organizer: { '@type': 'EducationalOrganization', name: 'INTEKKO', url: 'https://intekko.kz' },
+  })))} />
+</div>

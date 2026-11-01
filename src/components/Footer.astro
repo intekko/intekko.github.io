@@ -1,0 +1,55 @@
+---
+import Icon from './Icon.astro';
+import site from '../data/site.json';
+import { directions, url } from '../lib/util';
+const phone = site.phones[0];
+const wa = `https://wa.me/${phone.e164.slice(1)}`;
+---
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="footer__logo" href={url('/')}><img src={url('/logo/intekko-logo-white.svg')} alt="INTEKKO" width="160" height="28" loading="lazy" /></a>
+        <p>Учебный центр ТОО «INTEKKO»: тренинги по ТБ, ОТ и ООС (HSE) и безопасному вождению по всему Казахстану с 2019 года.</p>
+        <div class="footer__accr">
+          <img src={url('/img/rospa-logo.webp')} alt="RoSPA Qualifications International Centre 223" width="91" height="40" loading="lazy" />
+          <img src={url('/img/iosh-logo.webp')} alt="IOSH Approved training provider 5072" width="29" height="40" loading="lazy" />
+          <span class="mchs" title="Аттестат МЧС РК">МЧС</span>
+        </div>
+      </div>
+      <div>
+        <h4>Направления</h4>
+        <ul>{directions.map((d) => <li><a href={url(`/courses/${d.slug}/`)}>{d.title}</a></li>)}<li><a href={url('/consulting/')}>Консалтинг и решения</a></li></ul>
+      </div>
+      <div>
+        <h4>Компания</h4>
+        <ul>
+          <li><a href={url('/about/')}>О компании</a></li>
+          <li><a href={url('/schedule/')}>График курсов</a></li>
+          <li><a href={url('/courses/')}>Каталог курсов</a></li>
+          <li><a href={site.links.safetydriving} target="_blank" rel="noopener">safetydriving.kz</a></li>
+          <li><a href={site.links.bilimlms} target="_blank" rel="noopener">BilimLMS.com — e-learning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <ul>
+          <li><a href={`tel:${phone.e164}`} data-goal="click_phone">{phone.display}</a></li>
+          <li><a href={wa} target="_blank" rel="noopener" data-goal="click_whatsapp">WhatsApp</a> · <a href={site.telegram} target="_blank" rel="noopener">Telegram</a></li>
+          <li><a href={`mailto:${site.email}`} data-goal="click_email">{site.email}</a></li>
+          <li><a href={site.instagram} target="_blank" rel="noopener">Instagram {site.instagramHandle}</a></li>
+          <li>{site.address}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2019–2026 {site.legalName}</span>
+      <a href={url('/privacy/')}>Политика обработки персональных данных</a>
+    </div>
+  </div>
+</footer>
+<div class="mobile-bar">
+  <a class="btn btn--outline" href={`tel:${phone.e164}`} data-goal="click_phone"><Icon name="phone" size={18} />Позвонить</a>
+  <a class="btn btn--wa" href={wa} target="_blank" rel="noopener" data-goal="click_whatsapp"><Icon name="whatsapp" size={18} />WhatsApp</a>
+  <button class="btn btn--primary" type="button" data-lead>Заявка</button>
+</div>

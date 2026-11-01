@@ -1,0 +1,19 @@
+{
+  "name": "intekko-site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-data.mjs && astro build",
+    "preview": "astro preview",
+    "fetch-schedule": "node scripts/fetch-schedule.mjs"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0",
+    "astro": "^5.18.2",
+    "fuse.js": "^7.5.0"
+  }
+}

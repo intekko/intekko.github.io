@@ -1,0 +1,21 @@
+---
+import { FORMAT_LABEL, CERT_LABEL, courseUrl, type Course } from '../lib/util';
+interface Props { c: Course }
+const { c } = Astro.props;
+---
+<div class="course-row" id={c.slug} data-course-row data-slug={c.slug} data-dir={c.direction} data-formats={c.formats.join(' ')} data-cert={c.certificate}>
+  <div class="course-row__main">
+    {c.hasPage ? <a class="course-row__title" href={courseUrl(c)}>{c.title}</a> : <span class="course-row__title">{c.title}</span>}
+    <div class="badges">
+      {c.status === 'coming_soon' && <span class="badge badge--soon">Готовится аккредитация · планируется</span>}
+      {['rospa', 'iosh'].includes(c.certificate) && <span class="badge badge--cert">{CERT_LABEL[c.certificate]}</span>}
+      {c.certificate === 'kz' && <span class="badge">{CERT_LABEL.kz}</span>}
+      {c.duration && <span class="badge">{c.duration}</span>}
+      {c.formats.map((f) => <span class="badge" style="background:transparent;border:1px solid var(--border)">{FORMAT_LABEL[f]}</span>)}
+    </div>
+  </div>
+  <div class="course-row__actions">
+    {c.hasPage && <a class="btn btn--outline btn--sm" href={courseUrl(c)}>Подробнее</a>}
+    <button class="btn btn--primary btn--sm" type="button" data-lead data-course={c.slug} data-title={c.shortTitle}>Запросить программу</button>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import site from '../data/site.json';
+import { url } from '../lib/util';
+---
+<Base title="Спасибо за заявку" description="Заявка отправлена. INTEKKO свяжется с вами в течение рабочего дня." noindex>
+  <section class="section"><div class="wrap" style="max-width:640px;text-align:center">
+    <span class="icon-box" style="width:72px;height:72px;border-radius:50%;background:#E3F4EC;color:var(--success);margin-bottom:16px"><Icon name="check" size={36} /></span>
+    <h1 style="font-size:36px">Спасибо! Заявка отправлена</h1>
+    <p class="muted" style="font-size:18px">Мы свяжемся с вами в течение рабочего дня. Если вопрос срочный — напишите нам в WhatsApp.</p>
+    <div class="btn-row" style="justify-content:center"><a class="btn btn--wa" href={`https://wa.me/${site.phones[0].e164.slice(1)}`} target="_blank" rel="noopener" data-goal="click_whatsapp">Написать в WhatsApp</a><a class="btn btn--outline" href={url('/courses/')}>Каталог курсов</a></div>
+  </div></section>
+</Base>
+<script is:inline>window.__METRIKA_ID && window.ym && ym(window.__METRIKA_ID, 'reachGoal', 'lead_thanks');</script>

@@ -1,0 +1,63 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Icon from '../../../components/Icon.astro';
+import CourseRow from '../../../components/CourseRow.astro';
+import LeadForm from '../../../components/LeadForm.astro';
+import ScheduleTable from '../../../components/ScheduleTable.astro';
+import { directions, courses, upcoming, url, courseUrl } from '../../../lib/util';
+export function getStaticPaths() { return directions.map((d) => ({ params: { direction: d.slug }, props: { d } })); }
+const { d } = Astro.props;
+const list = courses.filter((c) => c.direction === d.slug);
+const subs = [...new Set(list.map((c) => c.subgroup))].map((s) => ({ name: s, items: list.filter((c) => c.subgroup === s) }));
+const flagship = list.filter((c) => c.hasPage);
+const hasDates = upcoming.some((s) => list.some((c) => c.slug === s.course_slug));
+---
+<Base title={`${d.title} — курсы и обучение`} description={`${d.title}: ${d.short}. ${list.length} программ INTEKKO — очно, выездом на объект и онлайн по всему Казахстану.`}
+  schema={[{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Главная', item: new URL(url('/'), Astro.site).href }, { '@type': 'ListItem', position: 2, name: 'Курсы', item: new URL(url('/courses/'), Astro.site).href }, { '@type': 'ListItem', position: 3, name: d.title }] }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <a href={url('/courses/')}>Курсы</a> / <span>{d.title}</span></nav>
+      <span class="eyebrow">Направление</span>
+      <h1>{d.title}</h1>
+      <p class="lead">{d.short}. {list.length} программ — очно в Астане, выездом на ваш объект или онлайн.</p>
+      <div class="btn-row"><button class="btn btn--primary" type="button" data-lead data-title={d.title}>Подобрать программу</button><a class="btn btn--light" href={url('/schedule/') + `?dir=${d.slug}`}>Даты по направлению</a></div>
+    </div>
+  </section>
+  {flagship.length > 0 && (
+    <section class="section" style="padding-bottom:20px">
+      <div class="wrap">
+        <h2 style="font-size:24px">Популярные курсы</h2>
+        <div class="grid grid-3">
+          {flagship.map((c) => (
+            <a class="card" href={courseUrl(c)}>
+              <div class="badges" style="margin-bottom:10px">{c.duration && <span class="badge">{c.duration}</span>}{c.certificate === 'rospa' && <span class="badge badge--cert">RoSPA</span>}{c.certificate === 'iosh' && <span class="badge badge--cert">IOSH</span>}</div>
+              <h3>{c.shortTitle}</h3><p class="muted" style="font-size:15px">{c.summary}</p><span style="font-weight:600">Подробнее →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+  <section class="section" style="padding-top:28px">
+    <div class="wrap">
+      <h2 style="font-size:24px">Все курсы направления</h2>
+      <div class="cat-group" style="padding-top:4px">
+        {subs.map((s) => (<div class="cat-sub">{s.name && <h3>{s.name}</h3>}{s.items.map((c) => <CourseRow c={c} />)}</div>))}
+      </div>
+      {d.slug === 'driving' && <p class="note"><Icon name="external" size={14} /> Подробнее о программах по вождению — на <a href="https://www.safetydriving.kz" target="_blank" rel="noopener">safetydriving.kz</a>.</p>}
+    </div>
+  </section>
+  {hasDates && (
+    <section class="section section--white">
+      <div class="wrap"><h2 style="font-size:24px">Ближайшие даты</h2><ScheduleTable direction={d.slug} /></div>
+    </section>
+  )}
+  <section class="section">
+    <div class="wrap">
+      <div class="cta">
+        <div class="cta__left"><span class="eyebrow">Корпоративное обучение</span><h2>Нужна группа на вашем объекте?</h2><p style="color:#C9D4E2">Приедем в любой город Казахстана, адаптируем программу под вашу специфику.</p></div>
+        <div class="cta__right"><LeadForm id="dir-form" compact /></div>
+      </div>
+    </div>
+  </section>
+</Base>

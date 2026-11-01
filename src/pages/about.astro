@@ -1,0 +1,50 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import SectionHead from '../components/SectionHead.astro';
+import site from '../data/site.json';
+import { url } from '../lib/util';
+---
+<Base title="О компании INTEKKO — учебный центр по HSE с 2019 года" description="INTEKKO — эксперты-практики в HSE: с 2019 года помогаем компаниям Казахстана снижать травматизм и аварийность. Аккредитации RoSPA №223, IOSH №5072, аттестат МЧС РК.">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <span>О компании</span></nav>
+      <span class="eyebrow">О компании</span>
+      <h1>INTEKKO — эксперты-практики в HSE</h1>
+      <p class="lead">С 2019 года помогаем компаниям Казахстана улучшать ситуацию в сфере HSE, снижать травматизм и аварийность.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <p style="font-size:18px">Наши инструкторы — практики с опытом на крупных проектах в нефтегазовой, горнорудной, строительной и транспортной отраслях Казахстана, Европы, Ближнего Востока и Северной Америки.</p>
+        <p class="muted">Мы обучаем на казахском, русском и английском языках — в учебном центре в Астане, на объектах заказчиков по всему Казахстану и онлайн. Для дистанционного обучения работает собственный портал <a href={site.links.bilimlms} target="_blank" rel="noopener">BilimLMS.com</a>.</p>
+        <div class="grid grid-2" style="margin-top:24px">
+          {site.stats.map((s) => <div class="card" style="padding:18px"><div class="stat__num" style="font-size:34px">{s.value.toLocaleString('ru-RU').replace(/ /g, ' ')}<span class="plus">{s.suffix}</span></div><p class="muted" style="margin:0;font-size:14px">{s.label}</p></div>)}
+        </div>
+      </div>
+      <img src={url('/img/classroom.webp')} alt="Занятие в учебном центре INTEKKO" width="900" height="1041" loading="lazy" style="max-height:620px" />
+    </div>
+  </section>
+  <section class="section section--white">
+    <div class="wrap">
+      <SectionHead eyebrow="Аккредитации" title="Подтверждённое качество" />
+      <div class="grid grid-3">
+        <div class="card"><img src={url('/img/rospa-logo.webp')} alt="RoSPA" width="137" height="60" loading="lazy" style="margin-bottom:14px" /><h3>RoSPA (Великобритания)</h3><p class="muted" style="margin:0">{site.accreditations.rospa}</p></div>
+        <div class="card"><img src={url('/img/iosh-logo.webp')} alt="IOSH" width="44" height="60" loading="lazy" style="margin-bottom:14px" /><h3>IOSH (Великобритания)</h3><p class="muted" style="margin:0">{site.accreditations.iosh}</p></div>
+        <div class="card"><span class="icon-box" style="width:60px;height:60px;margin-bottom:14px"><Icon name="shield" size={30} /></span><h3>МЧС Республики Казахстан</h3><p class="muted" style="margin:0">{site.accreditations.mchs}</p></div>
+      </div>
+      <div class="accr-note"><Icon name="star" /> Ежегодно проходим международный аудит RoSPA / IOSH. NEBOSH — в процессе получения аккредитации.</div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <SectionHead eyebrow="Отрасли" title="Где работали наши инструкторы" />
+      <div class="grid grid-4">
+        {[['hardhat', 'Нефтегаз', 'Добыча, переработка, трубопроводы, сервисные компании'], ['building', 'Горнорудная отрасль', 'Карьеры, шахты, обогатительные фабрики'], ['briefcase', 'Строительство', 'Генподрядчики и подрядные организации'], ['truck', 'Транспорт', 'Автопарки, автобусные и логистические компании']].map(([i, t, x]) => <div class="card"><span class="icon-box"><Icon name={i} /></span><h3 style="margin-top:12px;font-size:18px">{t}</h3><p class="muted" style="margin:0;font-size:14.5px">{x}</p></div>)}
+      </div>
+      <div class="clients-img" style="margin-top:32px"><img src={url('/img/clients.webp')} alt="Логотипы клиентов INTEKKO" width="1600" height="536" loading="lazy" /></div>
+      <div class="btn-row" style="margin-top:28px"><button class="btn btn--primary" type="button" data-lead>Оставить заявку</button><a class="btn btn--outline" href={url('/courses/')}>Каталог курсов</a></div>
+    </div>
+  </section>
+</Base>

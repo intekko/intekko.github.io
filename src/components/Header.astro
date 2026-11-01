@@ -1,0 +1,45 @@
+---
+import Icon from './Icon.astro';
+import site from '../data/site.json';
+import { directions, url } from '../lib/util';
+const path = Astro.url.pathname;
+const phone = site.phones[0];
+const cur = (p: string) => (path.startsWith(url(p)) ? 'page' : undefined);
+---
+<header class="header">
+  <div class="wrap header__in">
+    <a class="header__logo" href={url('/')} aria-label="INTEKKO — на главную"><img src={url('/logo/intekko-logo-white.svg')} alt="INTEKKO" width="150" height="26" /></a>
+    <nav class="nav" aria-label="Основное меню">
+      <div class="nav__dd" data-dd>
+        <button type="button" aria-expanded="false" aria-haspopup="true">Курсы <Icon name="chevron" size={16} /></button>
+        <div class="mega" role="menu">
+          {directions.map((d) => (
+            <a href={url(`/courses/${d.slug}/`)} role="menuitem"><span class="icon-box"><Icon name={d.icon} /></span><span><strong>{d.title}</strong><span>{d.short}</span></span></a>
+          ))}
+          <a href={url('/consulting/')} role="menuitem"><span class="icon-box"><Icon name="briefcase" /></span><span><strong>Консалтинг и решения</strong><span>Аудит СУ ОТ, культура безопасности, курсы на заказ</span></span></a>
+          <a href={url('/courses/')} role="menuitem"><span class="icon-box"><Icon name="list" /></span><span><strong>Все курсы</strong><span>Поиск и фильтры по каталогу</span></span></a>
+        </div>
+      </div>
+      <a href={url('/schedule/')} aria-current={cur('/schedule/')}>График</a>
+      <a href={url('/consulting/')} aria-current={cur('/consulting/')}>Консалтинг</a>
+      <a href={url('/about/')} aria-current={cur('/about/')}>О нас</a>
+      <a href={url('/contacts/')} aria-current={cur('/contacts/')}>Контакты</a>
+    </nav>
+    <div class="header__right">
+      <a class="header__phone" href={`tel:${phone.e164}`} data-goal="click_phone">{phone.display}</a>
+      <a class="header__wa" href={`https://wa.me/${phone.e164.slice(1)}`} target="_blank" rel="noopener" aria-label="Написать в WhatsApp" data-goal="click_whatsapp"><Icon name="whatsapp" /></a>
+      <button class="btn btn--primary btn--sm" type="button" data-lead>Оставить заявку</button>
+    </div>
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu" data-burger><Icon name="menu" size={24} /></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" hidden>
+  <a href={url('/courses/')}>Все курсы</a>
+  <div class="sub">{directions.map((d) => <a href={url(`/courses/${d.slug}/`)}>{d.title}</a>)}</div>
+  <a href={url('/schedule/')}>График курсов</a>
+  <a href={url('/consulting/')}>Консалтинг</a>
+  <a href={url('/about/')}>О нас</a>
+  <a href={url('/contacts/')}>Контакты</a>
+  <a href={`tel:${phone.e164}`} data-goal="click_phone">{phone.display}</a>
+  <button class="btn btn--primary btn--block" type="button" data-lead>Оставить заявку</button>
+</div>

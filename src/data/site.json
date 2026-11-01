@@ -1,0 +1,32 @@
+{
+  "name": "INTEKKO",
+  "legalName": "ТОО «INTEKKO»",
+  "url": "https://intekko.kz",
+  "founded": 2019,
+  "phones": [
+    { "label": "Отдел продаж", "e164": "+77085550123", "display": "+7 (708) 555 01 23", "whatsapp": true, "telegram": true }
+  ],
+  "email": "sales@intekko.kz",
+  "address": "Астана, Есильский район (точный адрес уточняется)",
+  "instagram": "https://www.instagram.com/intekko.kz/",
+  "instagramHandle": "@intekko.kz",
+  "telegram": "https://t.me/+77085550123",
+  "links": {
+    "safetydriving": "https://www.safetydriving.kz",
+    "bilimlms": "https://bilimlms.com"
+  },
+  "stats": [
+    { "value": 40, "suffix": "+", "label": "компаний-клиентов" },
+    { "value": 5400, "suffix": "+", "label": "обученных специалистов" },
+    { "value": 20, "suffix": "+", "label": "инструкторов и экспертов" },
+    { "value": 3, "suffix": "", "label": "языка: казахский, русский, английский" }
+  ],
+  "accreditations": {
+    "rospa": "Аккредитованный центр №223",
+    "iosh": "Аккредитованный центр №5072",
+    "mchs": "Аттестат № KZ88VEK00014474 от 16.03.2023"
+  },
+  "leadEndpoint": "/api/lead.php",
+  "scheduleEndpoint": "/api/schedule.php",
+  "metrikaId": null
+}

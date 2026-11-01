@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 1 * * *'   # ежедневная пересборка (снимок графика), 06:17 по Астане
+  workflow_dispatch:       # кнопка «Пересобрать» для менеджера
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Snapshot schedule from Google Sheets (if configured)
+        run: npm run fetch-schedule
+        env:
+          SCHEDULE_CSV_URL: ${{ vars.SCHEDULE_CSV_URL }}
+      - run: npm run build
+        env:
+          SITE_URL: https://intekko.github.io
+          BASE_PATH: /
+      - name: Remove server-only files from static preview
+        run: rm -rf dist/api dist/.htaccess
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

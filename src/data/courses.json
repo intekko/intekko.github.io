@@ -1,0 +1,4867 @@
+{
+  "directions": [
+    {
+      "slug": "driving",
+      "title": "Безопасное вождение и транспорт",
+      "icon": "car",
+      "order": 1,
+      "short": "RoSPA, зимнее вождение, ДОПОГ, погрузчики",
+      "count": 11
+    },
+    {
+      "slug": "international",
+      "title": "Международные курсы",
+      "icon": "globe",
+      "order": 2,
+      "short": "IOSH Managing Safely, HAZOP & HAZID, COSHH, NDT",
+      "count": 6
+    },
+    {
+      "slug": "kz-mandatory",
+      "title": "Обязательные курсы РК",
+      "icon": "shield",
+      "order": 3,
+      "short": "БиОТ, ПТМ, ПромБез, электробезопасность, первая помощь",
+      "count": 33
+    },
+    {
+      "slug": "hse",
+      "title": "Общие курсы ТБ и ОТ",
+      "icon": "hardhat",
+      "order": 4,
+      "short": "Высота, замкнутые пространства, LOTO, JSA, рабочие профессии",
+      "count": 30
+    },
+    {
+      "slug": "iso-ecology",
+      "title": "ISO и экология",
+      "icon": "leaf",
+      "order": 5,
+      "short": "ISO 9001, 14001, 45001, экологический кодекс, отходы",
+      "count": 17
+    },
+    {
+      "slug": "soft-skills",
+      "title": "Soft skills, HR и финансы",
+      "icon": "users",
+      "order": 6,
+      "short": "Лидерство, коммуникации, трудовое право, МСФО",
+      "count": 39
+    }
+  ],
+  "courses": [
+    {
+      "slug": "rospa-defensive-driving",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасное (защитное) вождение по стандарту RoSPA",
+      "shortTitle": "RoSPA Безопасное вождение",
+      "formats": [
+        "onsite",
+        "center"
+      ],
+      "duration": "1–2 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "rospa",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Международная квалификация RoSPA Level 2: теория, практика с инструктором и экзамен. Номерной сертификат RoSPA с онлайн-проверкой.",
+      "keywords": [
+        "rospa",
+        "роспа",
+        "вождение",
+        "защитное",
+        "defensive driving"
+      ],
+      "audience": [
+        "Корпоративные водители легковых автомобилей и автобусов",
+        "Водители автопарков нефтегазовых и горнорудных компаний",
+        "Руководители, которые сами садятся за руль",
+        "Внутренние инструкторы и наставники по вождению"
+      ],
+      "modules": [
+        [
+          "Причины ДТП и человеческий фактор",
+          "Статистика, типичные сценарии аварий, роль внимания, усталости и спешки."
+        ],
+        [
+          "Система контроля автомобиля",
+          "Информирование, позиция, скорость, передача, ускорение — пошаговая модель RoSPA."
+        ],
+        [
+          "Наблюдение и прогнозирование",
+          "Сканирование дороги, «читаемые» опасности, безопасная дистанция и пространство вокруг автомобиля."
+        ],
+        [
+          "Практическое вождение с инструктором",
+          "Оценка стиля вождения на реальном маршруте, разбор ошибок и рекомендации."
+        ],
+        [
+          "Экзамен RoSPA",
+          "Письменный тест и практическая оценка. По итогам — номерной сертификат RoSPA Level 2."
+        ]
+      ],
+      "faq": [
+        [
+          "Как проверить сертификат RoSPA?",
+          "Каждый сертификат имеет уникальный номер, который можно проверить онлайн в реестре RoSPA Qualifications."
+        ],
+        [
+          "Можно ли провести обучение на нашем объекте?",
+          "Да. Инструкторы выезжают в любой город Казахстана: Атырау, Актау, Астана, Караганда, Шымкент, Алматы и др."
+        ],
+        [
+          "На каком языке проходит курс?",
+          "На русском или казахском; по запросу — на английском."
+        ],
+        [
+          "Сколько человек в группе?",
+          "Оптимально 6–12 человек на одного инструктора для практической части."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "driving-rospa"
+    },
+    {
+      "slug": "winter-driving",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасное вождение в зимнее время",
+      "shortTitle": "Зимнее вождение",
+      "formats": [
+        "onsite",
+        "center"
+      ],
+      "duration": "1–2 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Сезонный курс: гололёд, торможение на скользкой дороге, видимость и подготовка автомобиля к зиме.",
+      "keywords": [
+        "зима",
+        "зимнее",
+        "гололёд",
+        "вождение"
+      ],
+      "audience": [
+        "Водители, работающие в зимний сезон и на трассах",
+        "Водители автобусов и спецтехники",
+        "Менеджеры автопарков"
+      ],
+      "modules": [
+        [
+          "Подготовка автомобиля и водителя к зиме",
+          "Шины, жидкости, обзорность, аварийный набор, планирование поездки."
+        ],
+        [
+          "Физика скользкой дороги",
+          "Сцепление, тормозной путь, ABS и ESP, влияние скорости."
+        ],
+        [
+          "Техника торможения и прохождения поворотов",
+          "Плавность, дистанция, действия при заносе."
+        ],
+        [
+          "Видимость, метель и ночь",
+          "Свет, скорость, остановка на трассе, буран."
+        ],
+        [
+          "Экстренные ситуации",
+          "Действия при поломке и вынужденной остановке в мороз, связь и эвакуация."
+        ]
+      ],
+      "faq": [
+        [
+          "Когда лучше проводить курс?",
+          "Перед началом зимнего сезона — в октябре–ноябре, но курс можно провести в любое время."
+        ],
+        [
+          "Какой сертификат выдаётся?",
+          "Сертификат INTEKKO о прохождении курса."
+        ],
+        [
+          "Есть ли практическая часть?",
+          "Да, практическая часть проводится на автомобилях заказчика или учебных автомобилях."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "driving-winter"
+    },
+    {
+      "slug": "safe-driving-general",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасное вождение — общий курс",
+      "shortTitle": "Безопасное вождение (общий курс)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": "1–2 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Для автопарков, автобусов, такси и спецтехники: оценка рисков и культура вождения. Сертификат INTEKKO.",
+      "keywords": [
+        "вождение",
+        "бдд",
+        "водители",
+        "автобус",
+        "такси"
+      ],
+      "audience": [
+        "Водители автопарков, автобусов и такси",
+        "Водители спецтехники",
+        "Ответственные за безопасность дорожного движения"
+      ],
+      "modules": [
+        [
+          "Оценка рисков в пути",
+          "Маршрут, погодные условия, усталость, спешка."
+        ],
+        [
+          "Безопасная дистанция и скорость",
+          "Правило 3–4 секунд, скорость по условиям."
+        ],
+        [
+          "Отвлечения за рулём",
+          "Телефон, навигатор, пассажиры, еда — как снизить риск."
+        ],
+        [
+          "Культура вождения в компании",
+          "Политика БДД, ответственность водителя и руководителя."
+        ],
+        [
+          "Итоговая проверка",
+          "Тест и разбор ошибок."
+        ]
+      ],
+      "faq": [
+        [
+          "Подходит ли курс для водителей с большим стажем?",
+          "Да. Опытные водители чаще всего недооценивают риски — курс работает с привычками."
+        ],
+        [
+          "Можно ли провести онлайн?",
+          "Теоретическая часть — онлайн-вебинаром, практика — очно."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "driving-group"
+    },
+    {
+      "slug": "bezopasnost-pri-primenenii-vilochnogo-pogruzchika-mini-pogruzchika",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасность при применении вилочного погрузчика, мини-погрузчика; сигнальщик",
+      "shortTitle": "Безопасность при применении вилочного погрузчика, мини-погрузчика; сигнальщик",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "погрузчик"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnoe-upravlenie-elektricheskim-shtabelerom-i-telezhkoy",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасное управление электрическим штабелёром и тележкой",
+      "shortTitle": "Безопасное управление электрическим штабелёром и тележкой",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "regulirovschik-signalschik",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Регулировщик, сигнальщик",
+      "shortTitle": "Регулировщик, сигнальщик",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnoe-kreplenie-gruza",
+      "direction": "driving",
+      "subgroup": null,
+      "title": "Безопасное крепление груза",
+      "shortTitle": "Безопасное крепление груза",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "adr-basic",
+      "direction": "driving",
+      "subgroup": "ДОПОГ/ADR",
+      "title": "ДОПОГ/ADR: подготовка водителей для перевозки опасных грузов (базовая программа)",
+      "shortTitle": "ДОПОГ/ADR: подготовка водителей для перевозки опасных грузов (базовая программа)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "допог",
+        "adr",
+        "опасные грузы"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "adr-class-7",
+      "direction": "driving",
+      "subgroup": "ДОПОГ/ADR",
+      "title": "ДОПОГ/ADR: перевозка радиоактивных материалов класса 7",
+      "shortTitle": "ДОПОГ/ADR: перевозка радиоактивных материалов класса 7",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "допог",
+        "adr",
+        "опасные грузы"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "adr-class-1",
+      "direction": "driving",
+      "subgroup": "ДОПОГ/ADR",
+      "title": "ДОПОГ/ADR: перевозка взрывчатых веществ и изделий класса 1",
+      "shortTitle": "ДОПОГ/ADR: перевозка взрывчатых веществ и изделий класса 1",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "допог",
+        "adr",
+        "опасные грузы"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "adr-tanks",
+      "direction": "driving",
+      "subgroup": "ДОПОГ/ADR",
+      "title": "ДОПОГ/ADR: перевозка опасных грузов в цистернах",
+      "shortTitle": "ДОПОГ/ADR: перевозка опасных грузов в цистернах",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "допог",
+        "adr",
+        "опасные грузы"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iosh-managing-safely",
+      "direction": "international",
+      "subgroup": null,
+      "title": "IOSH Managing Safely — Безопасное управление",
+      "shortTitle": "IOSH Managing Safely",
+      "formats": [
+        "center",
+        "onsite",
+        "webinar"
+      ],
+      "duration": "4 дня",
+      "languages": [
+        "ru",
+        "kk",
+        "en"
+      ],
+      "certificate": "iosh",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Международный курс IOSH для руководителей и специалистов: 7 модулей, 4 дня, тест 1 час и практическая оценка рисков. Сертификат IOSH.",
+      "keywords": [
+        "iosh",
+        "иош",
+        "managing safely",
+        "безопасное управление"
+      ],
+      "audience": [
+        "Руководители подразделений, мастера и супервайзеры",
+        "Специалисты служб ТБ и ОТ (HSE)",
+        "Менеджеры проектов и подрядных организаций",
+        "Специалисты, которым нужен международный сертификат для карьеры и тендеров"
+      ],
+      "modules": [
+        [
+          "Модуль 1. Введение в безопасное управление",
+          "Роль руководителя, моральные, юридические и финансовые причины управлять безопасностью."
+        ],
+        [
+          "Модуль 2. Оценка рисков",
+          "Понятия опасности и риска, пять шагов оценки рисков, иерархия мер контроля."
+        ],
+        [
+          "Модуль 3. Контроль рисков",
+          "Как выбрать и внедрить меры контроля, разрешения на работу, СИЗ."
+        ],
+        [
+          "Модуль 4. Понимание ответственности",
+          "Законодательство, системы менеджмента ISO 45001, роль руководителя."
+        ],
+        [
+          "Модуль 5. Выявление опасностей",
+          "Типичные опасные факторы: высота, электричество, машины, химия, эргономика, стресс."
+        ],
+        [
+          "Модуль 6. Расследование происшествий",
+          "Почему расследовать, как собрать факты и найти коренные причины."
+        ],
+        [
+          "Модуль 7. Измерение результативности",
+          "Активные и реактивные показатели, аудиты, анализ."
+        ],
+        [
+          "Оценка",
+          "Тест с несколькими вариантами ответа (1 час) и практический проект по оценке рисков на рабочем месте."
+        ]
+      ],
+      "faq": [
+        [
+          "Сколько действует сертификат IOSH?",
+          "Сертификат IOSH Managing Safely бессрочный; IOSH рекомендует освежать знания каждые 3 года."
+        ],
+        [
+          "На каком языке сдаётся экзамен?",
+          "На русском или английском — в зависимости от группы."
+        ],
+        [
+          "Можно ли пройти курс онлайн?",
+          "Да, в формате виртуального класса с живым инструктором (Teams/Zoom)."
+        ],
+        [
+          "Что если не сдать тест?",
+          "Предусмотрена пересдача по правилам IOSH."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "classroom"
+    },
+    {
+      "slug": "nebosh-igc",
+      "direction": "international",
+      "subgroup": null,
+      "title": "NEBOSH International General Certificate",
+      "shortTitle": "NEBOSH IGC",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "en"
+      ],
+      "certificate": "nebosh",
+      "flagship": false,
+      "hasPage": false,
+      "status": "coming_soon",
+      "summary": "Курс готовится: INTEKKO находится в процессе получения аккредитации NEBOSH.",
+      "keywords": [
+        "nebosh",
+        "небош",
+        "igc"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "hop",
+      "direction": "international",
+      "subgroup": null,
+      "title": "HOP (Human & Organizational Performance)",
+      "shortTitle": "HOP",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "hop",
+        "человеческий фактор"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "hazop-hazid",
+      "direction": "international",
+      "subgroup": null,
+      "title": "HAZOP & HAZID — обеспечение безопасности производства",
+      "shortTitle": "HAZOP & HAZID",
+      "formats": [
+        "center",
+        "onsite",
+        "webinar"
+      ],
+      "duration": "2–3 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Методы систематического выявления опасностей на этапах проектирования и эксплуатации: HAZID для ранней идентификации, HAZOP — для детального анализа отклонений.",
+      "keywords": [
+        "hazop",
+        "hazid",
+        "хазоп",
+        "анализ опасностей"
+      ],
+      "audience": [
+        "Инженеры-технологи и проектировщики",
+        "Специалисты по промышленной безопасности",
+        "Руководители производственных объектов нефтегаза и химии",
+        "Члены HAZOP-команд и секретари сессий"
+      ],
+      "modules": [
+        [
+          "Основы управления процессной безопасностью",
+          "Крупные аварии, барьерный подход, место HAZOP и HAZID."
+        ],
+        [
+          "Методология HAZID",
+          "Чек-листы опасностей, матрица рисков, оформление реестра."
+        ],
+        [
+          "Методология HAZOP",
+          "Узлы, параметры, управляющие слова, причины и последствия отклонений."
+        ],
+        [
+          "Роли в команде и проведение сессии",
+          "Ведущий, секретарь, эксперты; подготовка P&ID и документации."
+        ],
+        [
+          "Практикум",
+          "Разбор участка технологической схемы, оформление рабочих листов и рекомендаций."
+        ]
+      ],
+      "faq": [
+        [
+          "Нужен ли опыт в HAZOP?",
+          "Нет, курс начинается с основ, но базовое понимание технологических схем (P&ID) желательно."
+        ],
+        [
+          "Можно ли разобрать наш объект?",
+          "Да, при корпоративном обучении практикум строим на схемах заказчика."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "consulting"
+    },
+    {
+      "slug": "coshh",
+      "direction": "international",
+      "subgroup": null,
+      "title": "COSHH — контроль веществ, опасных для здоровья",
+      "shortTitle": "COSHH",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "coshh",
+        "химические вещества"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "ndt",
+      "direction": "international",
+      "subgroup": null,
+      "title": "NDT — неразрушающий контроль (UT, PAUT, TOFD, VT, MT, ET, PT, RT, TT)",
+      "shortTitle": "NDT — неразрушающий контроль",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "ndt",
+        "неразрушающий",
+        "ут",
+        "узк"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "biot",
+      "direction": "kz-mandatory",
+      "subgroup": null,
+      "title": "Безопасность и охрана труда (проверка знаний)",
+      "shortTitle": "БиОТ",
+      "formats": [
+        "center",
+        "onsite",
+        "webinar",
+        "elearning"
+      ],
+      "duration": "от 1 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Обучение и проверка знаний по безопасности и охране труда по требованиям Трудового кодекса РК. Удостоверение установленного образца.",
+      "keywords": [
+        "биот",
+        "охрана труда",
+        "бот",
+        "проверка знаний"
+      ],
+      "audience": [
+        "Руководители и их заместители",
+        "Специалисты и члены экзаменационных комиссий",
+        "Ответственные за безопасность и охрану труда"
+      ],
+      "modules": [
+        [
+          "Законодательство РК в области БиОТ",
+          "Трудовой кодекс, обязанности работодателя и работника, ответственность."
+        ],
+        [
+          "Организация работы по охране труда",
+          "Служба ОТ, инструктажи, наряд-допуск, документация."
+        ],
+        [
+          "Оценка профессиональных рисков",
+          "Опасные и вредные факторы, производственный контроль."
+        ],
+        [
+          "Расследование несчастных случаев",
+          "Порядок, сроки, оформление."
+        ],
+        [
+          "Проверка знаний",
+          "Тестирование и выдача удостоверения."
+        ]
+      ],
+      "faq": [
+        [
+          "Как часто нужно проходить обучение?",
+          "Периодичность — раз в 3 года для руководителей и специалистов или чаще по требованиям отрасли."
+        ],
+        [
+          "Какой документ выдаётся?",
+          "Удостоверение установленного образца и протокол проверки знаний."
+        ],
+        [
+          "Можно ли обучиться онлайн?",
+          "Да, теоретическая часть доступна онлайн и на BilimLMS.com."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "classroom"
+    },
+    {
+      "slug": "ptm",
+      "direction": "kz-mandatory",
+      "subgroup": null,
+      "title": "Пожарно-технический минимум (ПТМ)",
+      "shortTitle": "ПТМ",
+      "formats": [
+        "center",
+        "onsite",
+        "webinar",
+        "elearning"
+      ],
+      "duration": "1 день",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Обязательное обучение мерам пожарной безопасности для руководителей и ответственных лиц. Удостоверение установленного образца.",
+      "keywords": [
+        "птм",
+        "пожарно-технический",
+        "пожарная"
+      ],
+      "audience": [
+        "Руководители организаций",
+        "Ответственные за пожарную безопасность",
+        "Работники пожароопасных производств"
+      ],
+      "modules": [
+        [
+          "Нормативные требования пожарной безопасности РК",
+          "Обязанности и ответственность."
+        ],
+        [
+          "Пожарная опасность объекта",
+          "Причины пожаров, категории помещений."
+        ],
+        [
+          "Первичные средства пожаротушения",
+          "Огнетушители, внутренние краны — практика."
+        ],
+        [
+          "Действия при пожаре",
+          "Эвакуация, оповещение, взаимодействие с пожарной службой."
+        ],
+        [
+          "Проверка знаний",
+          "Тест и удостоверение."
+        ]
+      ],
+      "faq": [
+        [
+          "Кто обязан проходить ПТМ?",
+          "Руководители, ответственные за пожарную безопасность и работники пожароопасных производств."
+        ],
+        [
+          "Периодичность обучения?",
+          "Как правило, ежегодно или раз в 3 года — в зависимости от категории работника."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "classroom"
+    },
+    {
+      "slug": "prombez",
+      "direction": "kz-mandatory",
+      "subgroup": null,
+      "title": "Промышленная безопасность (подготовка, переподготовка, проверка знаний)",
+      "shortTitle": "ПромБез",
+      "formats": [
+        "center",
+        "onsite",
+        "webinar"
+      ],
+      "duration": "от 1 дня",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Подготовка и проверка знаний по промышленной безопасности для ОПО по аттестату МЧС РК. 23 темы ПОПБ — от магистральных трубопроводов до объектов газоснабжения.",
+      "keywords": [
+        "промбез",
+        "промышленная безопасность",
+        "попб",
+        "опо"
+      ],
+      "audience": [
+        "Руководители и технические руководители опасных производственных объектов",
+        "Специалисты и инженерно-технические работники",
+        "Члены экзаменационных комиссий"
+      ],
+      "modules": [
+        [
+          "Закон РК «О гражданской защите»",
+          "Требования к ОПО, декларирование, экспертиза."
+        ],
+        [
+          "Правила обеспечения промышленной безопасности (ПОПБ)",
+          "Выбранная тема ПОПБ по профилю объекта."
+        ],
+        [
+          "Производственный контроль",
+          "Организация, документация, ответственность."
+        ],
+        [
+          "Аварии и инциденты",
+          "Расследование, планы ликвидации аварий."
+        ],
+        [
+          "Проверка знаний",
+          "Тест, протокол, удостоверение."
+        ]
+      ],
+      "faq": [
+        [
+          "Какие темы ПОПБ доступны?",
+          "23 темы: компрессорные станции, грузоподъёмные механизмы, оборудование под давлением, газоснабжение, резервуары и др. Список — в каталоге."
+        ],
+        [
+          "Есть ли у INTEKKO право проводить обучение?",
+          "Да, аттестат МЧС РК № KZ88VEK00014474 от 16.03.2023."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "hero-instructors"
+    },
+    {
+      "slug": "popb-kompressornye-stantsii",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Компрессорные станции",
+      "shortTitle": "ПОПБ: Компрессорные станции",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-gruzopodemnye-mehanizmy",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Грузоподъёмные механизмы",
+      "shortTitle": "ПОПБ: Грузоподъёмные механизмы",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-oborudovanie-rabotayuschee-pod-davleniem",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Оборудование, работающее под давлением",
+      "shortTitle": "ПОПБ: Оборудование, работающее под давлением",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-podgotovka-i-pererabotka-gazov",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Подготовка и переработка газов",
+      "shortTitle": "ПОПБ: Подготовка и переработка газов",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-neftyanye-operatsii-na-more",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Нефтяные операции на море",
+      "shortTitle": "ПОПБ: Нефтяные операции на море",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-opo-neftyanoy-i-gazovoy-otrasley",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: ОПО нефтяной и газовой отраслей",
+      "shortTitle": "ПОПБ: ОПО нефтяной и газовой отраслей",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-magistralnye-truboprovody",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Магистральные трубопроводы",
+      "shortTitle": "ПОПБ: Магистральные трубопроводы",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-gornye-i-geologorazvedochnye-raboty",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Горные и геологоразведочные работы",
+      "shortTitle": "ПОПБ: Горные и геологоразведочные работы",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-ugolnye-shahty",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Угольные шахты",
+      "shortTitle": "ПОПБ: Угольные шахты",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-hvostovye-i-shlamovye-hozyaystva",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Хвостовые и шламовые хозяйства",
+      "shortTitle": "ПОПБ: Хвостовые и шламовые хозяйства",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-pererabotka-tverdyh-poleznyh-iskopaemyh",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Переработка твёрдых полезных ископаемых",
+      "shortTitle": "ПОПБ: Переработка твёрдых полезных ископаемых",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-proizvodstvo-rasplavov-metallov",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Производство расплавов металлов",
+      "shortTitle": "ПОПБ: Производство расплавов металлов",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-himicheskaya-otrasl",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Химическая отрасль",
+      "shortTitle": "ПОПБ: Химическая отрасль",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-hranenie-i-pererabotka-rastitelnogo-syrya",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Хранение и переработка растительного сырья",
+      "shortTitle": "ПОПБ: Хранение и переработка растительного сырья",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-vzryvnye-raboty",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Взрывные работы",
+      "shortTitle": "ПОПБ: Взрывные работы",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-neftehimiya-npz-neftebazy-i-azs",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Нефтехимия, НПЗ, нефтебазы и АЗС",
+      "shortTitle": "ПОПБ: Нефтехимия, НПЗ, нефтебазы и АЗС",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-proizvodstvo-berilliya",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Производство бериллия",
+      "shortTitle": "ПОПБ: Производство бериллия",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-istochniki-ioniziruyuschego-izlucheniya",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Источники ионизирующего излучения",
+      "shortTitle": "ПОПБ: Источники ионизирующего излучения",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-proizvodstvo-ftoristovodorodnoy-kisloty",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Производство фтористоводородной кислоты",
+      "shortTitle": "ПОПБ: Производство фтористоводородной кислоты",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-uran",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Уран",
+      "shortTitle": "ПОПБ: Уран",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-obekty-sistem-gazosnabzheniya",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Объекты систем газоснабжения",
+      "shortTitle": "ПОПБ: Объекты систем газоснабжения",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-rezervuary-dlya-nefti-i-nefteproduktov",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Резервуары для нефти и нефтепродуктов",
+      "shortTitle": "ПОПБ: Резервуары для нефти и нефтепродуктов",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "popb-tehnologicheskie-truboprovody",
+      "direction": "kz-mandatory",
+      "subgroup": "ПОПБ (23 темы)",
+      "title": "ПОПБ: Технологические трубопроводы",
+      "shortTitle": "ПОПБ: Технологические трубопроводы",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "попб",
+        "промбез"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "electrical-safety-i",
+      "direction": "kz-mandatory",
+      "subgroup": "Электробезопасность",
+      "title": "Электробезопасность: I квалификационная группа",
+      "shortTitle": "Электробезопасность: I квалификационная группа",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "электробезопасность",
+        "допуск"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "electrical-safety-ii",
+      "direction": "kz-mandatory",
+      "subgroup": "Электробезопасность",
+      "title": "Электробезопасность: II квалификационная группа",
+      "shortTitle": "Электробезопасность: II квалификационная группа",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "электробезопасность",
+        "допуск"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "electrical-safety-iii",
+      "direction": "kz-mandatory",
+      "subgroup": "Электробезопасность",
+      "title": "Электробезопасность: III квалификационная группа",
+      "shortTitle": "Электробезопасность: III квалификационная группа",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "электробезопасность",
+        "допуск"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "electrical-safety-iv",
+      "direction": "kz-mandatory",
+      "subgroup": "Электробезопасность",
+      "title": "Электробезопасность: IV квалификационная группа",
+      "shortTitle": "Электробезопасность: IV квалификационная группа",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "электробезопасность",
+        "допуск"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "electrical-safety-v",
+      "direction": "kz-mandatory",
+      "subgroup": "Электробезопасность",
+      "title": "Электробезопасность: V квалификационная группа",
+      "shortTitle": "Электробезопасность: V квалификационная группа",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "электробезопасность",
+        "допуск"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "first-aid",
+      "direction": "kz-mandatory",
+      "subgroup": null,
+      "title": "Первая помощь",
+      "shortTitle": "Первая помощь",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": "1 день",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Три уровня: базовый, продвинутый и подготовка лиц без медицинского образования. Практика на манекенах, только очно.",
+      "keywords": [
+        "первая помощь",
+        "сердечно-легочная",
+        "слр"
+      ],
+      "audience": [
+        "Все работники предприятий",
+        "Назначенные лица по оказанию первой помощи",
+        "Водители и работники удалённых объектов"
+      ],
+      "modules": [
+        [
+          "Оценка ситуации и безопасность",
+          "Алгоритм действий на месте происшествия, вызов помощи."
+        ],
+        [
+          "Сердечно-лёгочная реанимация",
+          "СЛР взрослого, использование АВД — практика на манекенах."
+        ],
+        [
+          "Кровотечения и травмы",
+          "Остановка кровотечений, жгут, перевязки, иммобилизация."
+        ],
+        [
+          "Ожоги, обморожения, отравления",
+          "Первая помощь при термических и химических поражениях."
+        ],
+        [
+          "Практический экзамен",
+          "Отработка сценариев и проверка навыков."
+        ]
+      ],
+      "faq": [
+        [
+          "Почему только очно?",
+          "Навыки СЛР и остановки кровотечений требуют практики под контролем инструктора."
+        ],
+        [
+          "Какой уровень выбрать?",
+          "Базовый — для всех работников; продвинутый — для назначенных лиц и удалённых объектов."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "first-aid"
+    },
+    {
+      "slug": "civil-defense",
+      "direction": "kz-mandatory",
+      "subgroup": null,
+      "title": "Гражданская оборона",
+      "shortTitle": "ГО",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "го",
+        "гражданская оборона"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "safety-culture",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Культура безопасности труда (для работников, руководителей и высшего руководства)",
+      "shortTitle": "Культура безопасности труда",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": "1 день",
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": true,
+      "hasPage": true,
+      "status": "active",
+      "summary": "Три уровня программы: для всех работников и подрядчиков, для руководителей и для высшего руководства. Меняем отношение к безопасности, а не только знания.",
+      "keywords": [
+        "культура безопасности",
+        "кбт",
+        "лидерство"
+      ],
+      "audience": [
+        "Работники и подрядчики",
+        "Мастера, супервайзеры и руководители подразделений",
+        "Высшее руководство компании"
+      ],
+      "modules": [
+        [
+          "Почему происходят происшествия",
+          "Пирамида Бёрда, человеческий фактор, нормализация отклонений."
+        ],
+        [
+          "Модели зрелости культуры безопасности",
+          "Где находится ваша компания и что дальше."
+        ],
+        [
+          "Лидерство в безопасности",
+          "Личный пример, обратная связь, поведенческие аудиты."
+        ],
+        [
+          "Право остановить работу",
+          "Психологическая безопасность и открытая отчётность."
+        ],
+        [
+          "План действий",
+          "Конкретные шаги для команды после тренинга."
+        ]
+      ],
+      "faq": [
+        [
+          "Можно ли адаптировать программу под компанию?",
+          "Да, включаем ваши «Жизненно важные правила», реальные кейсы и политику ОТ."
+        ],
+        [
+          "Какой уровень нужен руководителям?",
+          "Программа уровня 2 — для руководителей, уровня 3 — для топ-менеджмента."
+        ]
+      ],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": "hero-instructors"
+    },
+    {
+      "slug": "rassledovanie-proisshestviy",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Расследование происшествий",
+      "shortTitle": "Расследование происшествий",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-pri-provedenii-rabot-na-vysote",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность при проведении работ на высоте",
+      "shortTitle": "Безопасность при проведении работ на высоте",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "высота",
+        "высотные"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-pri-rabote-v-zamknutyh-prostranstvah",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность при работе в замкнутых пространствах",
+      "shortTitle": "Безопасность при работе в замкнутых пространствах",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-pri-provedenii-ognevyh-rabot",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность при проведении огневых работ",
+      "shortTitle": "Безопасность при проведении огневых работ",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-pri-provedenii-zemlyanyh-rabot",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность при проведении земляных работ",
+      "shortTitle": "Безопасность при проведении земляных работ",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-ruk",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность рук",
+      "shortTitle": "Безопасность рук",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnost-pri-ispolzovanii-lestnits-i-stremyanok",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасность при использовании лестниц и стремянок",
+      "shortTitle": "Безопасность при использовании лестниц и стремянок",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "ergonomika-rabochego-mesta",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Эргономика рабочего места",
+      "shortTitle": "Эргономика рабочего места",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "bezopasnaya-rabota-s-perenosnymi-elektroinstrumentami",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Безопасная работа с переносными электроинструментами",
+      "shortTitle": "Безопасная работа с переносными электроинструментами",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "vyyavlenie-i-upravlenie-opasnymi-faktorami-otsenka-riskov",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Выявление и управление опасными факторами, оценка рисков на рабочих местах",
+      "shortTitle": "Выявление и управление опасными факторами, оценка рисков на рабочих местах",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "gigiena-i-proizvodstvennaya-sanitariya-na-rabochem-meste",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Гигиена и производственная санитария на рабочем месте",
+      "shortTitle": "Гигиена и производственная санитария на рабочем месте",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "razreshenie-na-provedenie-rabot-naryad-dopusk",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Разрешение на проведение работ / наряд-допуск",
+      "shortTitle": "Разрешение на проведение работ / наряд-допуск",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "povedencheskie-audity-bezopasnosti",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Поведенческие аудиты безопасности",
+      "shortTitle": "Поведенческие аудиты безопасности",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "osnovy-bezopasnosti-pri-rabote-s-mashinami-i",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Основы безопасности при работе с машинами и оборудованием",
+      "shortTitle": "Основы безопасности при работе с машинами и оборудованием",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "izolyatsiya-istochnikov-energii-loto",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Изоляция источников энергии (LOTO)",
+      "shortTitle": "Изоляция источников энергии (LOTO)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "loto",
+        "изоляция"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "osnovy-elektrobezopasnosti",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Основы электробезопасности",
+      "shortTitle": "Основы электробезопасности",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "predotvraschenie-travmatizma-dlya-rabotnikov-ofisa-i-obsluzhivayuschih",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Предотвращение травматизма для работников офиса и обслуживающих организаций",
+      "shortTitle": "Предотвращение травматизма для работников офиса и обслуживающих организаций",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "osnovy-pozharnoy-bezopasnosti",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Основы пожарной безопасности",
+      "shortTitle": "Основы пожарной безопасности",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "analiz-bezopasnosti-rabot-jsa",
+      "direction": "hse",
+      "subgroup": null,
+      "title": "Анализ безопасности работ (JSA)",
+      "shortTitle": "Анализ безопасности работ (JSA)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "jsa",
+        "анализ безопасности"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "operator-kompressornyh-ustanovok",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Оператор компрессорных установок",
+      "shortTitle": "Оператор компрессорных установок",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "stropalschik",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Стропальщик",
+      "shortTitle": "Стропальщик",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "raboty-na-nozhnichnyh-podemnikah",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Работы на ножничных подъёмниках",
+      "shortTitle": "Работы на ножничных подъёмниках",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "operator-vilochnogo-pogruzchika",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Оператор вилочного погрузчика",
+      "shortTitle": "Оператор вилочного погрузчика",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "operator-kranomanipulyatornoy-ustanovki",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Оператор краноманипуляторной установки",
+      "shortTitle": "Оператор краноманипуляторной установки",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "operator-azs",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Оператор АЗС",
+      "shortTitle": "Оператор АЗС",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "operator-krana-upravlyaemogo-s-pola-kran-balka",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Оператор крана, управляемого с пола (кран-балка)",
+      "shortTitle": "Оператор крана, управляемого с пола (кран-балка)",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "lesomontazhnik",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Лесомонтажник",
+      "shortTitle": "Лесомонтажник",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "montazhnik-metallokonstruktsiy",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Монтажник металлоконструкций",
+      "shortTitle": "Монтажник металлоконструкций",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "montazhnik-trubnyh-uzlov",
+      "direction": "hse",
+      "subgroup": "Рабочие профессии",
+      "title": "Монтажник трубных узлов",
+      "shortTitle": "Монтажник трубных узлов",
+      "formats": [
+        "center",
+        "onsite"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "kz",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-9001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 9001:2015 — системы менеджмента качества",
+      "shortTitle": "ISO 9001:2015 — системы менеджмента качества",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-14001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 14001:2015 — системы экологического менеджмента",
+      "shortTitle": "ISO 14001:2015 — системы экологического менеджмента",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-45001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 45001:2018 — системы менеджмента охраны здоровья и безопасности труда",
+      "shortTitle": "ISO 45001:2018 — системы менеджмента охраны здоровья и безопасности труда",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-22000",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 22000:2018 / HACCP — безопасность пищевой продукции",
+      "shortTitle": "ISO 22000:2018 / HACCP — безопасность пищевой продукции",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-27001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO/IEC 27001:2022 — информационная безопасность",
+      "shortTitle": "ISO/IEC 27001:2022 — информационная безопасность",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-50001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 50001:2018 — энергоменеджмент",
+      "shortTitle": "ISO 50001:2018 — энергоменеджмент",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "integrirovannye-sistemy-menedzhmenta",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "Интегрированные системы менеджмента",
+      "shortTitle": "Интегрированные системы менеджмента",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-internal-auditor",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "Внутренний аудитор систем менеджмента ISO",
+      "shortTitle": "Внутренний аудитор систем менеджмента ISO",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-37001",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "ISO 37001:2016 — система менеджмента борьбы со взяточничеством",
+      "shortTitle": "ISO 37001:2016 — система менеджмента борьбы со взяточничеством",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "iso-documentation",
+      "direction": "iso-ecology",
+      "subgroup": "ISO",
+      "title": "Комбинированный курс по управлению документацией ISO",
+      "shortTitle": "Комбинированный курс по управлению документацией ISO",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "iso",
+        "исо"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "vedenie-ekologicheskoy-dokumentatsii-po-novomu-ekologicheskomu-kodeksu",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Ведение экологической документации по новому Экологическому кодексу",
+      "shortTitle": "Ведение экологической документации по новому Экологическому кодексу",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "sovershenstvovanie-sistemy-upravleniya-othodami-sovremennye-tehnologii-pererabotki",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Совершенствование системы управления отходами, современные технологии переработки",
+      "shortTitle": "Совершенствование системы управления отходами, современные технологии переработки",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "ekologicheskaya-dokumentatsiya-podgotovka-i-sdacha-otchetnosti-v",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Экологическая документация: подготовка и сдача отчётности в области ООС",
+      "shortTitle": "Экологическая документация: подготовка и сдача отчётности в области ООС",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "kontseptsiya-novogo-vodnogo-kodeksa-rk",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Концепция нового Водного кодекса РК",
+      "shortTitle": "Концепция нового Водного кодекса РК",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlenie-othodami-i-opasnymi-himicheskimi-veschestvami-v",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Управление отходами и опасными химическими веществами в РК: новые требования",
+      "shortTitle": "Управление отходами и опасными химическими веществами в РК: новые требования",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "obraschenie-s-othodami",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Обращение с отходами",
+      "shortTitle": "Обращение с отходами",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "ratsionalnoe-upravlenie-othodami-na-predpriyatii",
+      "direction": "iso-ecology",
+      "subgroup": "Экология и ООС",
+      "title": "Рациональное управление отходами на предприятии",
+      "shortTitle": "Рациональное управление отходами на предприятии",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [
+        "экология",
+        "оос"
+      ],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "novelly-trudovogo-kodeksa-rk",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Новеллы Трудового кодекса РК",
+      "shortTitle": "Новеллы Трудового кодекса РК",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "trudovoy-kodeks-rk-i-regulirovanie-trudovyh-otnosheniy",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Трудовой кодекс РК и регулирование трудовых отношений",
+      "shortTitle": "Трудовой кодекс РК и регулирование трудовых отношений",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "tehnologii-uspeshnogo-rekrutmenta",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Технологии успешного рекрутмента",
+      "shortTitle": "Технологии успешного рекрутмента",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "kurs-dlya-chlenov-soglasitelnoy-komissii",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Курс для членов согласительной комиссии",
+      "shortTitle": "Курс для членов согласительной комиссии",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-provedeniya-otborochnogo-intervyu",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Навыки проведения отборочного интервью",
+      "shortTitle": "Навыки проведения отборочного интервью",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "hr-menedzhment-i-effektivnoe-upravlenie-personalom",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "HR-менеджмент и эффективное управление персоналом",
+      "shortTitle": "HR-менеджмент и эффективное управление персоналом",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlenie-i-razvitie-personala",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Управление и развитие персонала",
+      "shortTitle": "Управление и развитие персонала",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "obuchenie-i-razvitie-personala",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Обучение и развитие персонала",
+      "shortTitle": "Обучение и развитие персонала",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "effektivnyy-podbor-personala",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Эффективный подбор персонала",
+      "shortTitle": "Эффективный подбор персонала",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "kadrovyy-audit",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Кадровый аудит",
+      "shortTitle": "Кадровый аудит",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "kadrovoe-deloproizvodstvo-na-gosudarstvennom-yazyke",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Кадровое делопроизводство (на государственном языке)",
+      "shortTitle": "Кадровое делопроизводство (на государственном языке)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlenie-dokumentatsiey-i-obespechenie-sohrannosti-dokumentov",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Управление документацией и обеспечение сохранности документов",
+      "shortTitle": "Управление документацией и обеспечение сохранности документов",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "deloproizvodstvo-nomenklatura-del-i-arhiv",
+      "direction": "soft-skills",
+      "subgroup": "HR и трудовое право",
+      "title": "Делопроизводство: номенклатура дел и архив",
+      "shortTitle": "Делопроизводство: номенклатура дел и архив",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "biznes-etiket",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Бизнес-этикет",
+      "shortTitle": "Бизнес-этикет",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlenie-konfliktami",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Управление конфликтами",
+      "shortTitle": "Управление конфликтами",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "prinyatie-resheniy",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Принятие решений",
+      "shortTitle": "Принятие решений",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-effektivnoy-prezentatsii",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки эффективной презентации",
+      "shortTitle": "Навыки эффективной презентации",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-resepshionista",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки ресепшиониста",
+      "shortTitle": "Навыки ресепшиониста",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "stress-menedzhment",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Стресс-менеджмент",
+      "shortTitle": "Стресс-менеджмент",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "razvitie-navykov-supervayzera",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Развитие навыков супервайзера",
+      "shortTitle": "Развитие навыков супервайзера",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "taym-menedzhment",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Тайм-менеджмент",
+      "shortTitle": "Тайм-менеджмент",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-liderstva",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки лидерства",
+      "shortTitle": "Навыки лидерства",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "postroenie-i-rabota-v-komande",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Построение и работа в команде",
+      "shortTitle": "Построение и работа в команде",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-delovyh-peregovorov",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки деловых переговоров",
+      "shortTitle": "Навыки деловых переговоров",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "sovremennye-upravlencheskie-kompetentsii",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Современные управленческие компетенции",
+      "shortTitle": "Современные управленческие компетенции",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-provedeniya-delovyh-vstrech",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки проведения деловых встреч",
+      "shortTitle": "Навыки проведения деловых встреч",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "navyki-effektivnoy-kommunikatsii",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Навыки эффективной коммуникации",
+      "shortTitle": "Навыки эффективной коммуникации",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "emotsionalnoe-liderstvo",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Эмоциональное лидерство",
+      "shortTitle": "Эмоциональное лидерство",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlenie-proektami",
+      "direction": "soft-skills",
+      "subgroup": "Soft skills и управление",
+      "title": "Управление проектами",
+      "shortTitle": "Управление проектами",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "teoriya-i-praktika-ustnogo-i-pismennogo-perevoda",
+      "direction": "soft-skills",
+      "subgroup": "Перевод",
+      "title": "Теория и практика устного и письменного перевода",
+      "shortTitle": "Теория и практика устного и письменного перевода",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "povyshenie-kvalifikatsii-dlya-perevodchikov",
+      "direction": "soft-skills",
+      "subgroup": "Перевод",
+      "title": "Повышение квалификации для переводчиков",
+      "shortTitle": "Повышение квалификации для переводчиков",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "tehnika-pismennogo-i-sinhronnogo-perevoda-ofitsialnyh-dokumentov",
+      "direction": "soft-skills",
+      "subgroup": "Перевод",
+      "title": "Техника письменного и синхронного перевода официальных документов (рус. ↔ каз.)",
+      "shortTitle": "Техника письменного и синхронного перевода официальных документов (рус. ↔ каз.)",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "aktualnye-voprosy-msfo",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Актуальные вопросы МСФО",
+      "shortTitle": "Актуальные вопросы МСФО",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "uglublennyy-kurs-po-planirovaniyu-i-byudzhetirovaniyu",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Углублённый курс по планированию и бюджетированию",
+      "shortTitle": "Углублённый курс по планированию и бюджетированию",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "izmeneniya-v-zrk-po-nalogooblozheniyu",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Изменения в ЗРК по налогообложению",
+      "shortTitle": "Изменения в ЗРК по налогообложению",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "obzor-nalogovogo-zakonodatelstva",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Обзор налогового законодательства",
+      "shortTitle": "Обзор налогового законодательства",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "finansovoe-modelirovanie-v-excel-dlya-byudzhetov-i",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Финансовое моделирование в Excel для бюджетов и контроля показателей",
+      "shortTitle": "Финансовое моделирование в Excel для бюджетов и контроля показателей",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "analiticheskie-metody-postroeniya-byudzhetov-v-excel",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Аналитические методы построения бюджетов в Excel",
+      "shortTitle": "Аналитические методы построения бюджетов в Excel",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    },
+    {
+      "slug": "upravlencheskie-sistemy-kontrolya",
+      "direction": "soft-skills",
+      "subgroup": "Финансы",
+      "title": "Управленческие системы контроля",
+      "shortTitle": "Управленческие системы контроля",
+      "formats": [
+        "onsite",
+        "center",
+        "webinar"
+      ],
+      "duration": null,
+      "languages": [
+        "ru",
+        "kk"
+      ],
+      "certificate": "intekko",
+      "flagship": false,
+      "hasPage": false,
+      "status": "active",
+      "summary": "",
+      "keywords": [],
+      "audience": [],
+      "modules": [],
+      "faq": [],
+      "seo": {
+        "title": "",
+        "description": ""
+      },
+      "image": null
+    }
+  ]
+}

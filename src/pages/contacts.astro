@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import LeadForm from '../components/LeadForm.astro';
+import site from '../data/site.json';
+import { url } from '../lib/util';
+const phone = site.phones[0];
+---
+<Base title="Контакты INTEKKO — Астана, телефон, WhatsApp" description={`Контакты учебного центра INTEKKO: ${phone.display} (телефон, WhatsApp, Telegram), ${site.email}. Астана. Обучение по всему Казахстану.`}>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <span>Контакты</span></nav>
+      <span class="eyebrow">Контакты</span>
+      <h1>Свяжитесь с нами</h1>
+      <p class="lead">Ответим в течение рабочего дня. Быстрее всего — в WhatsApp.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap grid grid-2" style="align-items:start">
+      <div class="grid" style="gap:14px">
+        <a class="card" href={`tel:${phone.e164}`} data-goal="click_phone" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="phone" /></span><div><small class="muted">Телефон</small><br /><b style="font-size:18px">{phone.display}</b></div></a>
+        <a class="card" href={`https://wa.me/${phone.e164.slice(1)}`} target="_blank" rel="noopener" data-goal="click_whatsapp" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="whatsapp" /></span><div><small class="muted">WhatsApp</small><br /><b style="font-size:18px">Написать в WhatsApp</b></div></a>
+        <a class="card" href={site.telegram} target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="send" /></span><div><small class="muted">Telegram</small><br /><b style="font-size:18px">{phone.display}</b></div></a>
+        <a class="card" href={`mailto:${site.email}`} data-goal="click_email" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="mail" /></span><div><small class="muted">Email</small><br /><b style="font-size:18px">{site.email}</b></div></a>
+        <a class="card" href={site.instagram} target="_blank" rel="noopener" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="instagram" /></span><div><small class="muted">Instagram</small><br /><b style="font-size:18px">{site.instagramHandle}</b></div></a>
+        <div class="card" style="display:flex;gap:14px;align-items:center"><span class="icon-box"><Icon name="pin" /></span><div><small class="muted">Адрес</small><br /><b>{site.address}</b></div></div>
+        <div class="map-ph" data-map>
+          <Icon name="pin" size={32} />
+          <p class="muted" style="margin:0">Карта загружается по клику, чтобы страница открывалась быстрее.</p>
+          <button class="btn btn--outline btn--sm" type="button" data-map-load>Показать карту</button>
+        </div>
+        <p class="note">{site.legalName} · реквизиты предоставляются по запросу.</p>
+      </div>
+      <div class="card"><h2 style="font-size:24px">Заявка на обучение</h2><LeadForm id="contacts-form" /></div>
+    </div>
+  </section>
+</Base>
+<script is:inline>
+  document.querySelector('[data-map-load]')?.addEventListener('click', function () {
+    var box = document.querySelector('[data-map]');
+    box.innerHTML = '<iframe title="Карта: Астана, Есильский район" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=71.4304%2C51.1282&z=13&text=%D0%90%D1%81%D1%82%D0%B0%D0%BD%D0%B0%2C%20%D0%95%D1%81%D0%B8%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD"></iframe>';
+    box.style.padding = '0';
+  });
+</script>

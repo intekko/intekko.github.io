@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-11-01T00:00:00+05:00",
+  "source": "demo",
+  "items": [
+    { "id": "2026-11-rospa-atr", "course_slug": "rospa-defensive-driving", "start_date": "2026-11-10", "end_date": "2026-11-11", "country": "Казахстан", "city": "Атырау", "format": "Очный класс", "language": "RU", "status": "few_seats", "seats_left": 3, "note": "" },
+    { "id": "2026-11-ptm-ast", "course_slug": "ptm", "start_date": "2026-11-12", "end_date": "2026-11-12", "country": "Казахстан", "city": "Астана", "format": "Очный класс", "language": "RU", "status": "open", "seats_left": null, "note": "" },
+    { "id": "2026-11-biot-online", "course_slug": "biot", "start_date": "2026-11-17", "end_date": "2026-11-18", "country": "Онлайн", "city": "Дистанционно", "format": "Дистанционно (Teams)", "language": "RU", "status": "open", "seats_left": null, "note": "" },
+    { "id": "2026-11-winter-ast", "course_slug": "winter-driving", "start_date": "2026-11-19", "end_date": "2026-11-20", "country": "Казахстан", "city": "Астана", "format": "Очный класс", "language": "RU", "status": "open", "seats_left": null, "note": "" },
+    { "id": "2026-11-iosh-ast", "course_slug": "iosh-managing-safely", "start_date": "2026-11-24", "end_date": "2026-11-27", "country": "Казахстан", "city": "Астана", "format": "Очный класс", "language": "RU", "status": "open", "seats_left": 6, "note": "" },
+    { "id": "2026-12-prombez-akt", "course_slug": "prombez", "start_date": "2026-12-02", "end_date": "2026-12-03", "country": "Казахстан", "city": "Актау", "format": "Очный класс", "language": "RU", "status": "open", "seats_left": null, "note": "" },
+    { "id": "2026-12-firstaid-ast", "course_slug": "first-aid", "start_date": "2026-12-08", "end_date": "2026-12-08", "country": "Казахстан", "city": "Астана", "format": "Очный класс", "language": "KZ", "status": "few_seats", "seats_left": 2, "note": "" },
+    { "id": "2026-12-hazop-online", "course_slug": "hazop-hazid", "start_date": "2026-12-09", "end_date": "2026-12-11", "country": "Онлайн", "city": "Дистанционно", "format": "Виртуальный класс", "language": "RU", "status": "open", "seats_left": null, "note": "" },
+    { "id": "2026-12-culture-krg", "course_slug": "safety-culture", "start_date": "2026-12-15", "end_date": "2026-12-15", "country": "Казахстан", "city": "Караганда", "format": "Очный класс", "language": "RU", "status": "planned", "seats_left": null, "note": "" },
+    { "id": "2027-01-iosh-online", "course_slug": "iosh-managing-safely", "start_date": "2027-01-19", "end_date": "2027-01-22", "country": "Онлайн", "city": "Дистанционно", "format": "Виртуальный класс", "language": "EN", "status": "planned", "seats_left": null, "note": "" },
+    { "id": "2027-01-general-shy", "course_slug": "safe-driving-general", "start_date": "2027-01-26", "end_date": "2027-01-27", "country": "Казахстан", "city": "Шымкент", "format": "Очный класс", "language": "RU", "status": "planned", "seats_left": null, "note": "" },
+    { "id": "2027-02-nebosh-ast", "course_slug": "nebosh-igc", "start_date": "2027-02-15", "end_date": "2027-02-26", "country": "Казахстан", "city": "Астана", "format": "Очный класс", "language": "RU", "status": "planned", "seats_left": null, "note": "Готовится аккредитация NEBOSH" },
+    { "id": "2026-10-rospa-alm", "course_slug": "rospa-defensive-driving", "start_date": "2026-10-20", "end_date": "2026-10-21", "country": "Казахстан", "city": "Алматы", "format": "Очный класс", "language": "RU", "status": "closed", "seats_left": null, "note": "Прошедшая дата — скрывается автоматически" }
+  ]
+}

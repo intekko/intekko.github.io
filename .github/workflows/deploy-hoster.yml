@@ -1,0 +1,21 @@
+name: Deploy to hoster.kz (SFTP)
+# Запускается вручную, когда будут доступы к хостингу. Секреты: SFTP_HOST, SFTP_USER, SFTP_PASSWORD, SFTP_PATH.
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - run: npm ci
+      - run: npm run fetch-schedule
+        env: { SCHEDULE_CSV_URL: '${{ vars.SCHEDULE_CSV_URL }}' }
+      - run: npm run build
+        env: { SITE_URL: 'https://intekko.kz', BASE_PATH: '/' }
+      - name: Upload changed files via SFTP (lftp mirror)
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "${{ secrets.SFTP_USER }},${{ secrets.SFTP_PASSWORD }}" "sftp://${{ secrets.SFTP_HOST }}" \
+            -e "set sftp:auto-confirm yes; mirror -R --only-newer --verbose dist/ ${{ secrets.SFTP_PATH }}; quit"

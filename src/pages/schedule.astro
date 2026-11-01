@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import ScheduleTable from '../components/ScheduleTable.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { url } from '../lib/util';
+---
+<Base title="График курсов INTEKKO — ближайшие даты обучения" description="Расписание открытых курсов INTEKKO: RoSPA, IOSH, ПромБез, ПТМ, БиОТ, первая помощь. Фильтры по городу, формату и месяцу, запись на конкретную дату в один клик.">
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <span>График курсов</span></nav>
+      <span class="eyebrow">График курсов</span>
+      <h1>Ближайшие открытые курсы</h1>
+      <p class="lead">Выберите программу, страну, город и формат. По запросу организуем корпоративную группу.</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:36px">
+    <div class="wrap">
+      <ScheduleTable filters />
+      <div class="sched-below">
+        <div class="card">
+          <span class="icon-box"><Icon name="calendar" /></span>
+          <h3 style="margin-top:14px">Нужна другая дата?</h3>
+          <p class="muted">Оставьте заявку, и мы предложим даты для вашей команды, включая другой город или страну.</p>
+          <a class="btn btn--outline" href={url('/courses/')}>Все курсы</a>
+        </div>
+        <div class="card"><h3>Заявка на обучение</h3><LeadForm id="schedule-form" compact /></div>
+      </div>
+    </div>
+  </section>
+</Base>

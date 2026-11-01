@@ -1,0 +1,49 @@
+---
+import Base from '../../layouts/Base.astro';
+import Icon from '../../components/Icon.astro';
+import CourseRow from '../../components/CourseRow.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import { directions, courses, url } from '../../lib/util';
+const groups = directions.map((d) => {
+  const list = courses.filter((c) => c.direction === d.slug);
+  const subs = [...new Set(list.map((c) => c.subgroup))];
+  return { d, subs: subs.map((s) => ({ name: s, items: list.filter((c) => c.subgroup === s) })), n: list.length };
+});
+---
+<Base title="Каталог курсов по ТБ, ОТ, HSE и безопасному вождению" description={`Все ${courses.length} программ INTEKKO: безопасное вождение RoSPA, IOSH, ПромБез, ПТМ, БиОТ, ISO, экология, soft skills. Поиск по названию и фильтры по формату и сертификату.`}
+  schema={[{ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Главная', item: new URL(url('/'), Astro.site).href }, { '@type': 'ListItem', position: 2, name: 'Курсы' }] }]}>
+  <section class="page-hero">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Хлебные крошки"><a href={url('/')}>Главная</a> / <span>Курсы</span></nav>
+      <span class="eyebrow">Каталог</span>
+      <h1>Курсы по ТБ, ОТ, экологии и безопасному вождению</h1>
+      <p class="lead">{courses.length} программ по шести направлениям. Найдите курс по названию или аббревиатуре: «промбез», «iosh», «высот».</p>
+    </div>
+  </section>
+  <section class="section" style="padding-top:36px" data-catalog>
+    <div class="wrap">
+      <div class="search-box"><Icon name="search" /><input type="search" placeholder="Поиск курса: ПТМ, ПромБез, IOSH, высота, погрузчик…" aria-label="Поиск по каталогу курсов" data-cat-search autocomplete="off" /></div>
+      <div class="cat-filters">
+        <select name="cdir" aria-label="Направление"><option value="">Все направления</option>{directions.map((d) => <option value={d.slug}>{d.title}</option>)}</select>
+        <select name="cfmt" aria-label="Формат"><option value="">Любой формат</option><option value="center">Очно в центре</option><option value="onsite">Выезд к заказчику</option><option value="webinar">Онлайн-вебинар</option><option value="elearning">E-learning</option></select>
+        <select name="ccert" aria-label="Тип сертификата"><option value="">Любой сертификат</option><option value="intl">Международный (RoSPA / IOSH)</option><option value="kz">Удостоверение РК</option><option value="intekko">Сертификат INTEKKO</option></select>
+      </div>
+      {groups.map(({ d, subs, n }, i) => (
+        <details class="cat-group" data-cat-group open={i < 3} id={d.slug}>
+          <summary><span class="icon-box"><Icon name={d.icon} /></span><h2>{d.title}</h2><span class="count" data-count-label>{n} курсов</span><Icon name="chevron" class="chev" /></summary>
+          {subs.map((s) => (
+            <div class="cat-sub" data-sub>
+              {s.name && <h3>{s.name}</h3>}
+              {s.items.map((c) => <CourseRow c={c} />)}
+            </div>
+          ))}
+        </details>
+      ))}
+      <div class="no-results" data-no-results>Ничего не нашли. Попробуйте другое слово или <button class="btn btn--sm btn--primary" type="button" data-lead>оставьте заявку</button> — подберём курс.</div>
+      <div class="cta" style="margin-top:48px">
+        <div class="cta__left"><span class="eyebrow">Не нашли нужный курс?</span><h2>Подберём или разработаем под задачу</h2><p style="color:#C9D4E2">Адаптируем программу под вашу отрасль, оборудование и корпоративные стандарты.</p></div>
+        <div class="cta__right"><LeadForm id="catalog-form" compact /></div>
+      </div>
+    </div>
+  </section>
+</Base>

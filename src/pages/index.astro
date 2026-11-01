@@ -1,0 +1,253 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import SectionHead from '../components/SectionHead.astro';
+import ScheduleTable from '../components/ScheduleTable.astro';
+import LeadForm from '../components/LeadForm.astro';
+import site from '../data/site.json';
+import consulting from '../data/consulting.json';
+import { directions, courses, courseBySlug, courseUrl, url } from '../lib/util';
+
+const dirExamples: Record<string, string[]> = {
+  driving: ['RoSPA Безопасное вождение', 'Зимнее вождение', 'ДОПОГ/ADR', 'Погрузчики и штабелёры'],
+  international: ['IOSH Managing Safely', 'HAZOP & HAZID', 'COSHH', 'NDT — неразрушающий контроль'],
+  'kz-mandatory': ['ПТМ', 'БиОТ', 'ПромБез (23 темы ПОПБ)', 'Электробезопасность I–V'],
+  hse: ['Работы на высоте', 'Замкнутые пространства', 'Изоляция энергии (LOTO)', 'Рабочие профессии'],
+  'iso-ecology': ['ISO 9001, 14001, 45001', 'Внутренний аудитор ISO', 'Экологический кодекс РК', 'Управление отходами'],
+  'soft-skills': ['Навыки лидерства', 'Трудовой кодекс РК', 'Деловые переговоры', 'Финансы и МСФО'],
+};
+const flagship = ['rospa-defensive-driving', 'winter-driving', 'safe-driving-general'].map((s) => courseBySlug(s)!);
+const flagLabel: Record<string, string> = { 'rospa-defensive-driving': 'RoSPA Level 2', 'winter-driving': 'Сезонный курс', 'safe-driving-general': 'Сертификат INTEKKO' };
+const phone = site.phones[0];
+---
+<Base title="INTEKKO — тренинги по ТБ, ОТ, ООС (HSE) и безопасному вождению в Казахстане"
+  description="Учебный центр INTEKKO: аккредитованный центр RoSPA №223 и IOSH №5072, аттестат МЧС РК. Обязательное обучение по законодательству РК, международные курсы, безопасное вождение — очно, выездом и онлайн.">
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div>
+        <span class="eyebrow">Учебный центр ТОО «INTEKKO»</span>
+        <h1>Тренинги по ТБ, ОТ и ООС (HSE) и <em>безопасному вождению</em></h1>
+        <p class="hero__lead">Международные стандарты RoSPA и IOSH, обязательные курсы РК, экология и ISO — очно, на вашем объекте, у нас в центре или онлайн 24/7.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href={url('/courses/')}>Подобрать курс <Icon name="arrow" size={18} /></a>
+          <a class="btn btn--light" href="#schedule">График курсов</a>
+        </div>
+        <div class="hero__accr">
+          <div class="logos">
+            <img src={url('/img/rospa-logo.webp')} alt="RoSPA Qualifications — International Centre 223" width="100" height="44" />
+            <img src={url('/img/iosh-logo.webp')} alt="IOSH Approved training provider 5072" width="32" height="44" />
+          </div>
+          <span>Аккредитованный центр RoSPA №223 и IOSH №5072 · аттестат МЧС РК</span>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src={url('/img/hero-instructors.webp')} alt="Инструкторы INTEKKO на производственном объекте" width="654" height="768" fetchpriority="high" />
+        <div class="hero__float"><strong>5 400+</strong><span>специалистов<br />обучено</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Цифры -->
+  <section class="section--tight" style="padding-top:40px">
+    <div class="wrap">
+      <div class="grid grid-4 stats">
+        {site.stats.map((s) => (
+          <div class="card reveal">
+            <div class="stat__num"><span data-count={s.value}>{s.value.toLocaleString('ru-RU').replace(/ /g, ' ')}</span><span class="plus">{s.suffix}</span></div>
+            <p>{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Аккредитации -->
+  <section class="section" style="padding-top:40px">
+    <div class="wrap">
+      <SectionHead eyebrow="Аккредитации" title="Прямые международные аккредитации и аттестат МЧС РК" text="Сертификаты, которые принимают на тендерах КМГ, Самрук-Казына и международных операторов." />
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="accr__logo"><img src={url('/img/rospa-logo.webp')} alt="RoSPA" width="146" height="64" loading="lazy" /></div>
+          <h3>RoSPA · Великобритания</h3>
+          <p class="muted">Аккредитованный центр <b>№223</b>. Курс «Безопасное (защитное) вождение» по стандарту RoSPA, номерные сертификаты с онлайн-проверкой.</p>
+        </div>
+        <div class="card reveal">
+          <div class="accr__logo"><img src={url('/img/iosh-logo.webp')} alt="IOSH" width="46" height="64" loading="lazy" /></div>
+          <h3>IOSH · Великобритания</h3>
+          <p class="muted">Аккредитованный центр <b>№5072</b>. Международный курс IOSH Managing Safely — «Безопасное управление».</p>
+        </div>
+        <div class="card reveal">
+          <div class="accr__logo"><span class="mchs">МЧС РК</span></div>
+          <h3>МЧС РК · Казахстан</h3>
+          <p class="muted">Аттестат на право проведения работ в области промышленной безопасности <b>№ KZ88VEK00014474</b> от 16.03.2023.</p>
+        </div>
+      </div>
+      <div class="accr-note"><Icon name="star" /> Ежегодно проходим международный аудит RoSPA / IOSH — качество программ подтверждается каждый год.</div>
+    </div>
+  </section>
+
+  <!-- 4. Направления -->
+  <section class="section section--white">
+    <div class="wrap">
+      <SectionHead eyebrow="Что мы предлагаем" title="35+ курсов по шести направлениям" text={`В каталоге — ${courses.length} программ из актуального Training List 2026. Подберём под задачу или разработаем новую.`} />
+      <div class="grid grid-3">
+        {directions.map((d) => (
+          <a class="card dir-card reveal" href={url(`/courses/${d.slug}/`)}>
+            <span class="icon-box"><Icon name={d.icon} /></span>
+            <h3>{d.title}</h3>
+            <ul>{dirExamples[d.slug].map((e) => <li>{e}</li>)}</ul>
+            <span class="more">{d.count} курсов →</span>
+          </a>
+        ))}
+      </div>
+      <div class="format-pill"><Icon name="lightbulb" size={18} /> Формат обучения — очно на объекте заказчика, у нас в центре или онлайн</div>
+    </div>
+  </section>
+
+  <!-- 5. Флагман -->
+  <section class="section">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+        <SectionHead eyebrow="Флагманское направление" title="Безопасное вождение по стандарту RoSPA" text="Обучаем корпоративных водителей снижать риски на дороге: теория, практика с инструктором и экзамен." />
+        <img src={url('/img/rospa-logo.webp')} alt="RoSPA International Centre 223" width="137" height="60" loading="lazy" style="margin-bottom:36px;border-radius:6px" />
+      </div>
+      <div class="grid grid-3">
+        {flagship.map((c) => (
+          <article class="card photo-card reveal">
+            <img src={url(`/img/${c.image}.webp`)} alt={c.title} width="608" height="342" loading="lazy" />
+            <div class="photo-card__body">
+              <span class="eyebrow" style="margin:0">{flagLabel[c.slug]}</span>
+              <h3>{c.title}</h3>
+              <p>{c.summary}</p>
+              <div class="btn-row"><a class="btn btn--outline btn--sm" href={courseUrl(c)}>Подробнее</a><button class="btn btn--primary btn--sm" type="button" data-lead data-course={c.slug} data-title={c.shortTitle}>Записаться</button></div>
+            </div>
+          </article>
+        ))}
+      </div>
+      <div class="stat-strip">
+        <div><strong>50–70%</strong><span>меньше ДТП после обучения</span></div>
+        <div><strong>3 000+</strong><span>водителей обучено</span></div>
+        <div><strong>1–2 дня</strong><span>теория, практика, экзамен</span></div>
+      </div>
+      <p class="src-note"><Icon name="alert" size={14} /> В Казахстане за 2024 год — 31 597 ДТП и 2 421 погибший; 85 % аварий связаны с человеческим фактором (источник: Комитет по правовой статистике и спецучётам ГП РК). Человеческий фактор управляем.</p>
+      <div class="btn-row" style="margin-top:12px">
+        <a class="btn btn--outline" href={url('/courses/driving/')}>Все курсы по вождению</a>
+        <a class="btn btn--outline" href={site.links.safetydriving} target="_blank" rel="noopener">safetydriving.kz <Icon name="external" size={16} /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. График -->
+  <section class="section section--white" id="schedule">
+    <div class="wrap">
+      <SectionHead eyebrow="График курсов" title="Ближайшие открытые курсы" text="Выберите программу, город и формат. По запросу организуем корпоративную группу на вашем объекте." />
+      <ScheduleTable limit={6} />
+      <div class="btn-row" style="margin-top:20px"><a class="btn btn--outline" href={url('/schedule/')}>Весь график <Icon name="arrow" size={18} /></a></div>
+    </div>
+  </section>
+
+  <!-- 7. Форматы -->
+  <section class="section">
+    <div class="wrap">
+      <SectionHead eyebrow="Форматы обучения" title="Учитесь так, как удобно вашей команде" />
+      <div class="grid grid-4">
+        <div class="card fmt-card reveal"><span class="icon-box"><Icon name="building" /></span><h3>Очно в учебном центре</h3><p>Занятия в Астане: теория, практика и экзамен в группе с сертифицированным инструктором.</p></div>
+        <div class="card fmt-card reveal"><span class="icon-box"><Icon name="truck" /></span><h3>Выездное обучение</h3><p>На объекте заказчика в любом городе: Атырау, Актау, Астана, Караганда, Шымкент, Алматы и др.</p></div>
+        <div class="card fmt-card reveal"><span class="icon-box"><Icon name="video" /></span><h3>Онлайн-вебинар</h3><p>Живое занятие с инструктором: вопросы и разбор кейсов в реальном времени, из любой точки.</p></div>
+        <a class="card card--dark fmt-card reveal" href={site.links.bilimlms} target="_blank" rel="noopener"><span class="icon-box"><Icon name="laptop" /></span><h3>E-learning на BilimLMS.com</h3><p>Самостоятельно 24/7 с компьютера или смартфона: уроки, тесты, контроль прогресса и результатов.</p></a>
+      </div>
+      <div class="mixed"><Icon name="lightbulb" /><span><b>Смешанный формат:</b> теория онлайн на BilimLMS.com, практика — очно с инструктором. Сотрудники меньше времени проводят вне работы.</span></div>
+    </div>
+  </section>
+
+  <!-- 8. Обязательное обучение -->
+  <section class="section section--white">
+    <div class="wrap mand">
+      <div>
+        <SectionHead eyebrow="Законодательство РК" title="Обязательное обучение без лишних хлопот" text="Проводим обучение и проверку знаний с выдачей удостоверений установленного образца." />
+        <div class="mand__chips">
+          {[['ptm', 'Пожарно-технический минимум'], ['biot', 'Безопасность и охрана труда'], ['prombez', 'Промышленная безопасность'], ['electrical-safety-i', 'Электробезопасность'], ['first-aid', 'Первая помощь'], ['civil-defense', 'Гражданская оборона']].map(([s, t]) => (
+            <a class="chip" href={courseUrl(courseBySlug(s)!)}><Icon name="checkCircle" size={18} />{t}</a>
+          ))}
+        </div>
+        <p class="muted" style="margin:16px 0">Периодичность — ежегодно или раз в 3 года, в зависимости от курса. Многие курсы доступны онлайн — на BilimLMS.com или в формате вебинара.</p>
+        <button class="btn btn--primary" type="button" data-lead data-title="Обязательное обучение по законодательству РК">Узнать, какое обучение обязательно для вашей компании</button>
+      </div>
+      <img src={url('/img/first-aid.webp')} alt="Практическое занятие по первой помощи" width="494" height="295" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- 9. Результат -->
+  <section class="section">
+    <div class="wrap">
+      <SectionHead eyebrow="Результат для бизнеса" title="Что компания получает после обучения" />
+      <div class="grid grid-2">
+        <div class="card card--dark result-big reveal"><strong>50–70%</strong><p>снижение числа ДТП, несчастных случаев и простоев техники*</p></div>
+        <div class="card card--dark result-big reveal"><strong>15–25 млн ₸</strong><p>экономии в год для автопарка из 50 машин: ремонт, страховка, простой*</p></div>
+        <div class="card reveal"><span class="icon-box"><Icon name="award" /></span><h3 style="margin-top:12px">Преимущество на тендерах</h3><p class="muted" style="margin:0">Квалификации RoSPA и IOSH принимают КМГ, Самрук-Казына и международные операторы.</p></div>
+        <div class="card reveal"><span class="icon-box"><Icon name="scale" /></span><h3 style="margin-top:12px">Соответствие требованиям РК</h3><p class="muted" style="margin:0">Готовность к проверкам надзорных органов, меньше штрафов и юридических рисков.</p></div>
+      </div>
+      <p class="src-note">* Оценка INTEKKO по опыту проектов с клиентами.</p>
+    </div>
+  </section>
+
+  <!-- 10. Консалтинг -->
+  <section class="section section--white">
+    <div class="wrap">
+      <SectionHead eyebrow="Консалтинг и решения" title="Больше, чем обучение: выстраиваем систему" />
+      <div class="grid grid-4">
+        {consulting.areas.map((a) => (
+          <a class="card reveal" href={url('/consulting/')}><span class="icon-box"><Icon name={a.icon} /></span><h3 style="margin-top:14px;font-size:18px">{a.title}</h3><p class="muted" style="margin:0;font-size:14.5px">{a.text}</p></a>
+        ))}
+      </div>
+      <div class="btn-row" style="margin-top:20px"><a class="btn btn--outline" href={url('/consulting/')}>Все 16 услуг консалтинга <Icon name="arrow" size={18} /></a></div>
+    </div>
+  </section>
+
+  <!-- 11. Клиенты -->
+  <section class="section">
+    <div class="wrap">
+      <SectionHead eyebrow="Наши клиенты" title="Нам доверяют 40+ компаний" text="Нефтегаз, энергетика, горнорудная отрасль, строительство и транспорт." />
+      <div class="clients-img"><img src={url('/img/clients.webp')} alt="Клиенты INTEKKO: КазМунайГаз, KazTransOil, QazaqGaz Aimaq, Эмбамунайгаз, Karachaganak, Oil Services Company, Solidcore Resources, Бейнеу–Шымкент, Rio Tinto, ERG, Казахтуркмунай, Samruk Energy, Мойнак ГЭС, Каражанбасмунай, Uran Energo, KAP Logistics, SSAP, Экибастузская ГРЭС-1, Евросибэнерго, FWPS, Шардаринская ГЭС, Кедентранссервис, AVC Group, Heidelberg Cement, KazEuroTrans, Denholm Zholdas, Schoolbus" width="1600" height="536" loading="lazy" /></div>
+      <blockquote class="quote">
+        <Icon name="quote" size={28} class="muted" />
+        <div><p>«Программа курса RoSPA кардинально отличается от обычных автошкол. Всем водителям нашего автобусного парка очень понравилось».</p><cite>Темир, автобусный парк, Астана</cite></div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 12. Как мы работаем -->
+  <section class="section section--white">
+    <div class="wrap">
+      <SectionHead eyebrow="Как мы работаем" title="От заявки до сертификата — четыре шага" />
+      <div class="grid grid-4 steps">
+        <div class="card step reveal"><span class="step__num">01</span><h3>Заявка</h3><p>Вы описываете задачу: сколько сотрудников, какие должности, где и когда.</p></div>
+        <div class="card step reveal"><span class="step__num">02</span><h3>Подбор программы</h3><p>Предлагаем курсы и формат: очно, выезд, вебинар или BilimLMS.com.</p></div>
+        <div class="card step reveal"><span class="step__num">03</span><h3>Обучение</h3><p>Занятия, практика и экзамен; для онлайна — доступ сотрудникам на портале.</p></div>
+        <div class="card card--dark step reveal"><span class="step__num">04</span><h3>Сертификаты</h3><p>Выдаём удостоверения или сертификаты RoSPA, IOSH или INTEKKO и документы для отчётности.</p></div>
+      </div>
+      <div class="format-pill">Корпоративные группы · удобный график · казахский, русский, английский</div>
+    </div>
+  </section>
+
+  <!-- 13. CTA -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <div class="cta__left">
+          <span class="eyebrow">Готовы начать?</span>
+          <h2>Обсудим обучение вашей команды</h2>
+          <p style="color:#C9D4E2">Подберём программу, формат и график — и подготовим коммерческое предложение.</p>
+          <div class="cta__contacts">
+            <a href={`tel:${phone.e164}`} data-goal="click_phone"><small>Телефон, WhatsApp, Telegram</small><b>{phone.display}</b></a>
+            <a href={`mailto:${site.email}`} data-goal="click_email"><small>Email</small><b>{site.email}</b></a>
+            <a href={site.links.bilimlms} target="_blank" rel="noopener"><small>Онлайн-обучение</small><b>bilimlms.com</b></a>
+          </div>
+        </div>
+        <div class="cta__right"><LeadForm id="home-form" /></div>
+      </div>
+    </div>
+  </section>
+</Base>

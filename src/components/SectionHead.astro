@@ -1,0 +1,10 @@
+---
+interface Props { eyebrow?: string; title: string; text?: string; level?: 'h1' | 'h2'; center?: boolean }
+const { eyebrow, title, text, level = 'h2', center = false } = Astro.props;
+const H = level;
+---
+<div class="section-head" style={center ? 'margin-left:auto;margin-right:auto;text-align:center' : undefined}>
+  {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+  <H set:html={title} />
+  {text && <p set:html={text} />}
+</div>
